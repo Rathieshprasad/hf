@@ -1,0 +1,99 @@
+header.product-bar {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 10px 0px 0px 0px;
+  position: relative;
+  z-index: 150;
+}
+
+.new-container {
+  box-sizing: border-box;
+  margin: 0px 150px;
+  max-width: 1140px;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.product-bar-wrap {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add space between logo, Products, and Log In */
+  flex: 1; /* Take available space */
+}
+
+.logo-wrap {
+  box-sizing: border-box;
+  max-width: 140px;
+}
+
+.products-list {
+  box-sizing: border-box;
+}
+
+.product-nav-menu-text {
+  background-position: 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+  box-sizing: border-box;
+  color: #181c20;
+  background-color: #ffecec;
+  border-top: 1px solid #ffcbca;
+  border-left: 1px solid #ffcbca;
+  border-right: 1px solid #ffcbca;
+  border-bottom: 0px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: hero-new, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  list-style-type: none;
+  padding: 10px 16px; /* Adjusted padding */
+  position: relative;
+  text-align: left;
+}
+
+ul.products-list {
+  box-sizing: border-box;
+  display: flex;
+  margin: 0; /* Remove default margin */
+}
+
+.product-bar-login {
+  box-sizing: border-box;
+  text-align: right;
+  flex: 1; /* Take available space */
+}
+
+.product-bar-link {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #181c20;
+  cursor: pointer;
+  display: inline-block;
+  font-family: hero-new, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  padding: 7px 10px;
+  text-align: right;
+  text-decoration: none;
+}
+
+img#hfTopbarlogo.hf-productbar__logo {
+  aspect-ratio: auto 116/24;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline;
+  max-width: 116px;
+  overflow: clip;
+  vertical-align: middle;
+}
+
+.productnav{
+    background-color: #FFECEC;
+	box-sizing: border-box;
+	position: sticky;
+	z-index: 150;
+}
