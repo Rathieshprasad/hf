@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "'Hero New Regular'";
+  src: local('Hero New Regular'), url('./Hero New Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Hero New Thin';
+  src: local('Hero New Thin'), url('/Hero New Thin.woff') format('woff');
+}
+
+* {
+  margin: 0;
+}
+body {
+  font-family: 'Hero New Regular';
+}
+
 header.product-bar {
   background-color: #ffffff;
   box-sizing: border-box;
@@ -44,12 +60,12 @@ header.product-bar {
   border-bottom: 0px;
   cursor: pointer;
   display: inline-block;
-  font-family: hero-new, sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 24px;
   list-style-type: none;
-  padding: 10px 16px; /* Adjusted padding */
+  padding: 10px 26px 10px;
   position: relative;
   text-align: left;
 }
@@ -57,13 +73,13 @@ header.product-bar {
 ul.products-list {
   box-sizing: border-box;
   display: flex;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .product-bar-login {
   box-sizing: border-box;
   text-align: right;
-  flex: 1; /* Take available space */
+  flex: 1;
 }
 
 .product-bar-link {
@@ -73,7 +89,7 @@ ul.products-list {
   color: #181c20;
   cursor: pointer;
   display: inline-block;
-  font-family: hero-new, sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 13px;
   line-height: 24px;
   padding: 7px 10px;
@@ -91,9 +107,715 @@ img#hfTopbarlogo.hf-productbar__logo {
   vertical-align: middle;
 }
 
-.productnav{
-    background-color: #FFECEC;
-	box-sizing: border-box;
-	position: sticky;
-	z-index: 150;
+.productnav {
+  background-color: #ffecec;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  border-top: 1px solid #ffcbca;
+}
+
+.productnav-wrap {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 3px 0px;
+  place-content: normal space-between;
+  place-items: center normal;
+  z-index: 15;
+}
+
+.productnav-logowrap {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 450px;
+}
+
+a.productnav-link {
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2px 0px;
+  place-content: normal flex-start;
+  place-items: center normal;
+  text-decoration: none;
+}
+
+img#Navbarlogo.productnav-logo {
+  aspect-ratio: auto 20 / 20;
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: clip;
+  vertical-align: middle;
+}
+
+span.productnav-logo-text {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 25px;
+  line-height: 37.5px;
+  margin: 0px 0px 0px 12px;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+ul.productnav-menu-list {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  margin: 0px 0px 0px -4px;
+  /* padding: 0% 5%; */
+  place-content: normal center;
+  place-items: center normal;
+}
+
+a.productnav-menu-link {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  list-style-type: none;
+  padding: 15px;
+  text-decoration: none;
+}
+li.productnav-menu-list-item {
+  list-style-type: none;
+}
+span.productnav-menu-text {
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #181c20;
+  cursor: pointer;
+  display: inline;
+  font-family: 'Hero New Regular', sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  list-style-type: none;
+  padding: 7px 10px;
+  position: relative;
+  text-align: left;
+}
+
+a.productnav-link {
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  padding: 2px 0px;
+  place-content: normal flex-start;
+  place-items: center normal;
+}
+
+button.productnav-btn {
+  align-items: flex-start;
+  appearance: button;
+  background-color: #ff3a3a;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 5px 10px;
+  place-items: flex-start normal;
+  position: relative;
+  text-align: center;
+  transform: matrix(1, 0, 0, 1, 0, 3);
+  transition-duration: 0.3s;
+  white-space: nowrap;
+}
+
+div.pricing-banner {
+  background-image: url('https://assets.www.happyfox.com/v2/images/pricing-new-banner-bg-new.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  display: block;
+}
+
+div.col-md-12 {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: 1px;
+  padding: 0px 15px;
+  position: relative;
+  width: 80%;
+  text-align: center;
+}
+
+h1 {
+  box-sizing: border-box;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 48px;
+  /* margin: 80px 0px 76px; */
+  margin: 80px 0px 76px;
+  /* margin: 0; */
+  text-align: center;
+}
+
+div.pricing-explainer {
+  align-items: stretch;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 222px;
+  flex-grow: 1;
+  /* width: 100%; */
+  max-width: 60%;
+  min-height: 90px;
+  place-content: normal space-between;
+  place-items: stretch normal;
+}
+
+a.pricing-explainer-block {
+  background-color: #ffffff;
+  border-radius: 16px 16px 0px 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 410px;
+  padding: 24px 0px 15px;
+  place-content: normal center;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  text-decoration: none;
+  width: 48%;
+}
+
+div.container {
+  max-width: 1140px;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+}
+div.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+h4.pricing-explainer-heading {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Hero New Regular', sans-serif;
+  font-weight: 500;
+  line-height: 19.2px;
+  margin: 0px 0px 5px 0px;
+  text-align: center;
+  color: #181c20;
+}
+
+section.agent-pricing-bg-wrap {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px -8px 10px 0px;
+  box-sizing: border-box;
+  padding: 50px 0px 0px;
+}
+
+div.pricing-calc-tab {
+  background-color: #f5f4f4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0px 0px 70px;
+  padding: 10px;
+  place-content: normal space-between;
+  /* width: 100%; */
+}
+
+button.pricing-calc-tabs {
+  align-items: flex-start;
+  appearance: button;
+  background-color: #f5f4f4;
+  /* background-color: #ffffff; */
+  border: 1px solid #f5f4f4;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Hero New Regular', sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 13.5px 10px;
+  place-items: flex-start normal;
+  text-align: center;
+  width: 25%;
+}
+
+button.pricing-calc-tabs:hover {
+  background-color: #fff;
+  border: 1px solid #c8c7c7;
+  font-weight: bold;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+div.agent-pricing {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+}
+
+.wrapper {
+  margin-top: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+div.col-md-12.pricing-comparer {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: 1px;
+  padding: 0px 15px 50px;
+  position: relative;
+}
+.pricing-plans {
+  align-items: stretch;
+  text-align: center;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mighty-box {
+  border-left: 1px solid #eee;
+  width: 25%;
+  height: auto;
+}
+.mighty-box:first-child {
+  border-left: none;
+}
+
+div#mightybox.mighty-box {
+  background-color: #ffffff;
+  border-radius: 0px 0px 10px 10px;
+  box-sizing: border-box;
+  padding: 0px 0px 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+div#Fantastic.mighty-box {
+  background-color: #ffffff;
+  border-radius: 0px 0px 10px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px; */
+  box-sizing: border-box;
+  padding: 0px 0px 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+div#Enterprise.mighty-box {
+  background-color: #ffffff;
+  border-radius: 0px 0px 10px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px; */
+  box-sizing: border-box;
+  padding: 0px 0px 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+div#EnterprisePlus.mighty-box {
+  background-color: #ffffff;
+  border-radius: 0px 0px 10px 10px;
+  /* box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px; */
+  box-sizing: border-box;
+  padding: 0px 0px 10px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+.mighty-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+.pricing-popular {
+  margin-top: -25px;
+  text-align: left;
+  padding: 0 30px;
+  margin-bottom: 5px;
+  color: #ff3a3a;
+  font-size: 14px;
+  font-weight: 400;
+}
+h3.plan-name {
+  box-sizing: border-box;
+  color: #212529;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  margin: 0px 30px 20px;
+  text-align: left;
+}
+
+div.pricing-figures {
+  box-sizing: border-box;
+  margin: 0px 0px 40px;
+  padding: 0px 25px;
+  text-align: left;
+}
+
+div.pricing-dollar {
+  box-sizing: border-box;
+}
+
+span.pricing-dollar-symbol {
+  box-sizing: border-box;
+  color: #212529;
+  display: inline;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+}
+span.pricing-dollar-amt {
+  box-sizing: border-box;
+  color: #212529;
+  display: inline;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+  text-align: left;
+}
+span.pricing-dollar-amt-snip {
+  box-sizing: border-box;
+  color: #212529;
+  display: inline;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+}
+
+div.pricing-savings-percentage {
+  box-sizing: border-box;
+  display: flex;
+  margin: 0px 0px 10px;
+  padding: 0px 0px 20px;
+  position: relative;
+}
+
+span.pricing-savings-percentage-value {
+  box-sizing: border-box;
+  color: #009928;
+  display: inline;
+  font-family: 'Hero New Regular', sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+}
+sup {
+  top: -0.5em;
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+div.pricing-feature-list {
+  box-sizing: border-box;
+  display: flex;
+  padding: 20px 35px 85px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul.pricing-feature-list-inner {
+  box-sizing: border-box;
+}
+
+li {
+  box-sizing: border-box;
+  color: #555550;
+  display: list-item;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  list-style-type: circle;
+  margin: 0px 0px 15px 8px;
+  position: relative;
+  text-align: left;
+}
+#Fantastic .pricing-feature-list li:first-child:before {
+  content: '+';
+  position: absolute;
+  left: -18px;
+}
+#Fantastic .pricing-feature-list li:first-child {
+  list-style: none;
+  font-weight: 500;
+  position: relative;
+}
+div.pricing-button-container {
+  bottom: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+  position: absolute;
+  /* top: 483.797px; */
+}
+
+a.pricing-button.box-pricing-button {
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Hero New Regular', sans-serif;
+  font-weight: 500;
+  justify-content: space-between;
+  line-height: 24px;
+  padding: 10px 20px;
+  place-content: normal space-between;
+  place-items: center normal;
+  text-align: left;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  text-decoration: none;
+}
+
+a.pricing-button.box-pricing-button:hover{
+  background-color: #ff3a3a;
+  color: #eee;
+}
+
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+.pricing-banner-para {
+  margin: 80px auto 40px;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  max-width: 570px;
+  border-radius: 16px;
+  padding: 14px 0 12px;
+  background: #f9f9f9;
+}
+
+.compare-plans-icon {
+  margin: auto;
+  text-align: center;
+  display: block;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.compare-plans-icon p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #000;
+  padding: 40px 0px;
+  background: #f8f8f8;
+}
+
+p.header-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.table-title {
+  width: 31%;
+  padding-left: 10px;
+}
+
+div.pricing-comparison-table.open-table {
+  box-sizing: border-box;
+  max-height: 15000px;
+  padding: 20px 0px 0px;
+  position: relative;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  z-index: 0;
+}
+
+div#pricingsticker.pricing-table-header {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  position: sticky;
+  top: 54px;
+  z-index: 9;
+}
+
+div.col-md-12.header-row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 0 100%;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  justify-content: space-between;
+  max-width: 100%;
+  min-height: 1px;
+  padding: 30px 0px 20px;
+  place-content: normal space-between;
+  position: relative;
+  border-bottom: 1px solid rgba(152, 157, 173, 0.2);
+}
+
+div.table-column span {
+  box-sizing: border-box;
+  color: #323643;
+  float: left;
+  font-family: 'Hero New Regular', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+}
+
+div.pricing-table-features {
+  box-sizing: border-box;
+}
+
+div.col-md-12.color-tracker {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: 1px;
+  padding: 0px 15px;
+  position: relative;
+  text-align: left;
+}
+
+div.header-row {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 10px;
+  place-content: normal space-between;
+}
+
+p.pricing-table-sub-header {
+  box-sizing: border-box;
+  font-family: 'Hero New Regular', sans-serif;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 30px 0px 0px;
+  text-align: left;
+}
+
+div.table-column {
+  width: 16%;
+  font-size: 16px;
+  color: #787979;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
+div.plain-row {
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0px;
+  place-content: normal space-between;
+}
+
+a.pricing-para-link {
+  box-sizing: border-box;
+  color: #212529;
+  cursor: pointer;
+  display: inline;
+  font-family: 'Hero New Regular', sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: left;
+}
+
+a.pricing-para-link:hover {
+  color: #f16631;
+}
+
+p.feature-status.pricing-tick {
+  text-align: left;
+  width: 20px;
+  height: 20px;
+  background: url('https://assets.www.happyfox.com/v2/images/pricing-tick.svg')
+    no-repeat left top;
+  margin: 0;
+}
+
+.pricing-no-tick {
+  width: 20px;
+  height: 20px;
+  background: url('https://assets.www.happyfox.com/v2/images/pricing-no-tick.svg')
+    no-repeat left top;
+  margin: 0;
+}
+
+.col-md-12.color-tracker > div:nth-child(odd) {
+  background: #fafafa;
+}
+
+.col-md-12.color-tracker > div:nth-child(even) {
+  background: #fff;
+}
+
+.col-md-12.color-tracker > div:nth-child(odd).header-row {
+  background: #fff;
+  border: none;
+}
+
+.know-more-button {
+  color: #323643;
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 10px;
+  border: solid 1px #989dad;
+  border-radius: 4px;
+  margin: 20px 8px 20px 8px;
+  cursor: pointer;
+  background: 0 0;
+}
+
+.star-info-modified{
+  padding: 30px 0px 30px 15px;
+  color: #9b9b9b;
 }
