@@ -8,43 +8,88 @@
     />
   </head>
   <script>
+    window.onload = function () {}
+    // const targetElement = document.getElementById("mighty")
+    // const unlimitedAgents = document.getElementById("unlimited-agents")
+
+    // unlimitedAgents.addEventListener("click", function (event) {
+    //   event.preventDefault()
+    //   targetElement.innerHTML = "Starter"
+    // })
     document.addEventListener("DOMContentLoaded", function () {
-      var questionColumns = document.querySelectorAll(".question-column");
+      document.getElementById("unlimited-agents").onclick = function () {
+        document.getElementById("mighty").innerHTML = "Starter"
+        document.getElementById("fantastic").innerHTML = "Growth"
+        document.getElementById("enterprise").innerHTML = "Scale"
+        document.getElementById("enterprise-plus").innerHTML = "Scale Plus"
+        document.getElementById("mighty-tb").innerHTML = "Starter"
+        document.getElementById("fantastic-tb").innerHTML = "Growth"
+        document.getElementById("enterprise-tb").innerHTML = "Scale"
+        document.getElementById("enterprise-plus-tb").innerHTML = "Scale Plus"
+        document.getElementById("mighty-price").innerHTML = "1,149"
+        document.getElementById("fantastic-price").innerHTML = "1,599"
+        document.getElementById("enterprise-price").innerHTML = "2,399"
+        document.getElementById("enterprise-plus-price").innerHTML = "3,999"
+        document.getElementById("monthly").style.display = "none"
+        document.getElementById("unlimited-agents-a").style.backgroundColor =
+          "#fff"
+        document.getElementById("agent-based-pricing-a").style.backgroundColor =
+          "#ffeada"
+      }
+
+      document.getElementById("agent-based-pricing").onclick = function () {
+        document.getElementById("mighty").innerHTML = "Mighty"
+        document.getElementById("fantastic").innerHTML = "Fantastic"
+        document.getElementById("enterprise").innerHTML = "Enterprise"
+        document.getElementById("enterprise-plus").innerHTML = "Enterprise Plus"
+        document.getElementById("mighty-tb").innerHTML = "Mighty"
+        document.getElementById("fantastic-tb").innerHTML = "Fantastic"
+        document.getElementById("enterprise-tb").innerHTML = "Enterprise"
+        document.getElementById("enterprise-plus-tb").innerHTML =
+          "Enterprise Plus"
+        document.getElementById("mighty-price").innerHTML = "29"
+        document.getElementById("fantastic-price").innerHTML = "39"
+        document.getElementById("enterprise-price").innerHTML = "52"
+        document.getElementById("enterprise-plus-price").innerHTML = "64"
+        document.getElementById("monthly").style.display = "block"
+        document.getElementById("unlimited-agents-a").style.backgroundColor =
+          "#ffeada"
+        document.getElementById("agent-based-pricing-a").style.backgroundColor =
+          "#fff"
+      }
+
+      var questionColumns = document.querySelectorAll(".question-column")
       questionColumns.forEach(function (questionColumn) {
-        var h6Element = questionColumn.querySelector("h6");
-        var pElement = questionColumn.querySelector("p");
+        var h6Element = questionColumn.querySelector("h6")
+        var pElement = questionColumn.querySelector("p")
 
         h6Element.addEventListener("click", function () {
           if (
             pElement.style.display === "none" ||
             pElement.style.display === ""
           ) {
-            pElement.style.display = "block";
+            pElement.style.display = "block"
           } else {
-            pElement.style.display = "none";
+            pElement.style.display = "none"
           }
-          pElement.style.transition = "display 0.3s ease-in-out";
-        });
+          pElement.style.transition = "display 0.3s ease-in-out"
+        })
 
-        var knowMoreButton = document.querySelector(".know-more-button");
+        var knowMoreButton = document.querySelector(".know-more-button")
         var additionalTablesContainer = document.querySelector(
           ".additional-table-container"
-        );
+        )
 
         knowMoreButton.addEventListener("click", function () {
-          knowMoreButton.style.display = "none";
-          additionalTablesContainer.style.display = "block";
-        });
-      });
-      const pricingExplainerBlockSecond = document.querySelectorAll(".second");
-      pricingExplainerBlockSecond.addEventListener("click", function () {
-        pricingExplainerBlockSecond.style.backgroundColor = "#fff";
-      });
-    });
+          knowMoreButton.style.display = "none"
+          additionalTablesContainer.style.display = "block"
+        })
+      })
+    })
   </script>
   <body>
     <header class="product-bar">
-      <div class="new-container">
+      <div class="container">
         <div class="product-bar-wrap">
           <div class="logo-wrap">
             <a href="#" class="product-bar-link">
@@ -58,17 +103,18 @@
               />
             </a>
           </div>
-
-          <div class="products-list">
-            <div class="product-list-product-item">
-              <div class="product-nav-menu-link">
-                <span class="product-nav-menu-text">
-                  Products
-                  <i class="fa fa-caret-down" style="font-size: 15px"></i>
-                </span>
-              </div>
-            </div>
-          </div>
+          <nav class="product-bar-products">
+            <ul class="products-list">
+              <li class="product-list-product-item">
+                <div class="product-nav-menu-link">
+                  <span class="product-nav-menu-text">
+                    Products
+                    <i class="fa fa-caret-down" style="font-size: 15px"></i>
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </nav>
 
           <div class="product-bar-login">
             <a href="#" class="product-bar-link">Log In</a>
@@ -77,7 +123,7 @@
       </div>
     </header>
     <section class="productnav">
-      <div class="new-container">
+      <div class="container">
         <div class="productnav-wrap">
           <div class="productnav-logowrap">
             <a href="#" class="productnav-link">
@@ -161,12 +207,27 @@
               <h1>Plans & Pricing</h1>
 
               <div class="pricing-explainer">
-                <a href="#" class="pricing-explainer-block">
-                  <h4 class="pricing-explainer-heading">Agent Based Pricing</h4>
+                <a
+                  href="#"
+                  class="pricing-explainer-block"
+                  id="agent-based-pricing-a"
+                >
+                  <h4
+                    class="pricing-explainer-heading"
+                    id="agent-based-pricing"
+                  >
+                    Agent Based Pricing
+                  </h4>
                 </a>
 
-                <a href="#" class="pricing-explainer-block second">
-                  <h4 class="pricing-explainer-heading">Unlimited Agents</h4>
+                <a
+                  href="#"
+                  class="pricing-explainer-block second"
+                  id="unlimited-agents-a"
+                >
+                  <h4 class="pricing-explainer-heading" id="unlimited-agents">
+                    Unlimited Agents
+                  </h4>
                 </a>
               </div>
             </div>
@@ -178,7 +239,8 @@
       <div class="container pricing-comparison-wrapper">
         <div class="row agent-pricing">
           <div class="pricing-calc-tab">
-            <button class="pricing-calc-tabs" data-val="Monthly">Monthly</button
+            <button class="pricing-calc-tabs" data-val="Monthly" id="monthly">
+              Monthly</button
             ><button class="pricing-calc-tabs" data-val="Annual">Annual</button
             ><button
               class="pricing-calc-tabs active"
@@ -201,12 +263,14 @@
             <div class="pricing-comparison">
               <div class="pricing-plans div-center">
                 <div class="mighty-box" id="mightybox">
-                  <h3 class="plan-name">Mighty</h3>
+                  <h3 class="plan-name" id="mighty">Mighty</h3>
                   <div class="pricing-figures">
                     <div class="pricing-dollar">
                       <span class="pricing-dollar-symbol">$</span>
                       <span class="pricing-dollar-inner"></span>
-                      <span class="pricing-dollar-amt">29</span>
+                      <span class="pricing-dollar-amt" id="mighty-price"
+                        >29</span
+                      >
                       <span class="pricing-dollar-amt-snip">Per agent/mo</span>
                     </div>
 
@@ -268,12 +332,14 @@
                   </div>
                 </div>
                 <div class="mighty-box fantastic-box" id="Fantastic">
-                  <h3 class="plan-name">Fantastic</h3>
+                  <h3 class="plan-name" id="fantastic">Fantastic</h3>
                   <div class="pricing-figures">
                     <div class="pricing-dollar">
                       <span class="pricing-dollar-symbol">$</span>
                       <span class="pricing-dollar-inner">
-                        <span class="pricing-dollar-amt">39</span>
+                        <span class="pricing-dollar-amt" id="fantastic-price"
+                          >39</span
+                        >
                         <span class="pricing-dollar-amt-snip"
                           >Per agent/mo</span
                         >
@@ -342,12 +408,14 @@
                 </div>
                 <div class="mighty-box enterprise-box" id="Enterprise">
                   <p class="pricing-popular">Most Popular</p>
-                  <h3 class="plan-name">Enterprise</h3>
+                  <h3 class="plan-name" id="enterprise">Enterprise</h3>
                   <div class="pricing-figures">
                     <div class="pricing-dollar">
                       <span class="pricing-dollar-symbol">$</span>
                       <span class="pricing-dollar-inner">
-                        <span class="pricing-dollar-amt">52</span>
+                        <span class="pricing-dollar-amt" id="enterprise-price"
+                          >52</span
+                        >
                         <span class="pricing-dollar-amt-snip"
                           >Per agent/mo</span
                         >
@@ -415,12 +483,18 @@
                   </div>
                 </div>
                 <div class="mighty-box plus-box" id="EnterprisePlus">
-                  <h3 class="plan-name">Enterprise Plus</h3>
+                  <h3 class="plan-name" id="enterprise-plus">
+                    Enterprise Plus
+                  </h3>
                   <div class="pricing-figures">
                     <div class="pricing-dollar">
                       <span class="pricing-dollar-symbol">$</span>
                       <span class="pricing-dollar-inner">
-                        <span class="pricing-dollar-amt">64</span>
+                        <span
+                          class="pricing-dollar-amt"
+                          id="enterprise-plus-price"
+                          >64</span
+                        >
                         <span class="pricing-dollar-amt-snip"
                           >Per agent/mo</span
                         >
@@ -507,25 +581,25 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 header-row">
-              <div class="table-title">
+              <div class="table-title" id="titleone">
                 <div class="header-title">&nbsp;</div>
               </div>
               <div class="table-column">
-                <p class="plan-title"><span>Mighty</span></p>
+                <p class="plan-title"><span id="mighty-tb">Mighty</span></p>
               </div>
               <div class="table-column">
                 <p class="plan-title fantastic-plan-title">
-                  <span>Fantastic</span>
+                  <span id="fantastic-tb">Fantastic</span>
                 </p>
               </div>
               <div class="table-column">
                 <p class="plan-title enterprise-plan-title">
-                  <span>Enterprise</span>
+                  <span id="enterprise-tb">Enterprise</span>
                 </p>
               </div>
               <div class="table-column">
                 <p class="plan-title plus-plan-title">
-                  <span>Enterprise Plus</span>
+                  <span id="enterprise-plus-tb">Enterprise Plus</span>
                 </p>
               </div>
             </div>

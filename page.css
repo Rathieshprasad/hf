@@ -1,17 +1,18 @@
 @font-face {
   font-family: "'Hero New Regular'";
-  src: local("Hero New Regular"), url("./Hero New Regular.woff") format("woff");
+  src: local('Hero New Regular'), url('./Hero New Regular.woff') format('woff');
 }
 @font-face {
-  font-family: "Hero New Thin";
-  src: local("Hero New Thin"), url("/Hero New Thin.woff") format("woff");
+  font-family: 'Hero New Thin';
+  src: local('Hero New Thin'), url('/Hero New Thin.woff') format('woff');
 }
 
 * {
   margin: 0;
 }
 body {
-  font-family: "Hero New Regular";
+  font-family: 'Hero New Regular';
+  margin: 0;
 }
 
 header.product-bar {
@@ -24,8 +25,7 @@ header.product-bar {
 
 .new-container {
   box-sizing: border-box;
-  margin: 0px 150px;
-  max-width: 1140px;
+  /* max-width: 1140px; */
   padding: 0px 15px;
   display: flex;
   align-items: center;
@@ -53,8 +53,17 @@ header.product-bar {
   max-width: 140px;
 }
 
-.products-list {
+ul.products-list {
   box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav.product-bar-products {
+  width: 70%;
+  position: relative;
 }
 
 .product-nav-menu-text {
@@ -69,7 +78,7 @@ header.product-bar {
   border-bottom: 0px;
   cursor: pointer;
   display: inline-block;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -98,7 +107,7 @@ ul.products-list {
   color: #181c20;
   cursor: pointer;
   display: inline-block;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 13px;
   line-height: 24px;
   padding: 7px 10px;
@@ -166,7 +175,7 @@ img#Navbarlogo.productnav-logo {
 span.productnav-logo-text {
   box-sizing: border-box;
   cursor: pointer;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 25px;
   line-height: 37.5px;
   margin: 0px 0px 0px 12px;
@@ -187,6 +196,11 @@ ul.productnav-menu-list {
   place-items: center normal;
 }
 
+li.product-list-product-item {
+  margin: 0px 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
 a.productnav-menu-link {
   box-sizing: border-box;
   cursor: pointer;
@@ -197,6 +211,7 @@ a.productnav-menu-link {
 }
 li.productnav-menu-list-item {
   list-style-type: none;
+  margin: 0px 15px 0px 0px;
 }
 span.productnav-menu-text {
   border-radius: 10px;
@@ -205,7 +220,7 @@ span.productnav-menu-text {
   color: #181c20;
   cursor: pointer;
   display: inline;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-weight: 500;
   line-height: 24px;
   list-style-type: none;
@@ -237,7 +252,7 @@ button.productnav-btn {
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
@@ -251,7 +266,7 @@ button.productnav-btn {
 }
 
 div.pricing-banner {
-  background-image: url("https://assets.www.happyfox.com/v2/images/pricing-new-banner-bg-new.png");
+  background-image: url('https://assets.www.happyfox.com/v2/images/pricing-new-banner-bg-new.png');
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
@@ -273,7 +288,7 @@ div.col-md-12 {
 
 h1 {
   box-sizing: border-box;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 48px;
@@ -288,7 +303,7 @@ div.pricing-explainer {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin: 0px 222px;
+  margin: 0px auto;
   flex-grow: 1;
   /* width: 100%; */
   max-width: 60%;
@@ -322,7 +337,7 @@ a.pricing-explainer-block.second:hover {
   background-color: #fff;
 }
 
-div.container {
+.container {
   max-width: 1140px;
   width: 100%;
   padding-right: 15px;
@@ -342,7 +357,7 @@ div.row {
 h4.pricing-explainer-heading {
   box-sizing: border-box;
   cursor: pointer;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-weight: 500;
   line-height: 19.2px;
   margin: 0px 0px 5px 0px;
@@ -357,22 +372,23 @@ section.agent-pricing-bg-wrap {
   padding: 50px 0px 0px;
 }
 
-div.pricing-calc-tab {
+.pricing-calc-tab {
   background-color: #f5f4f4;
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
-  margin: 0px 0px 70px;
+  /* margin: 0px 0px 70px; */
+  margin-bottom: 35px;
   padding: 10px;
-  place-content: normal space-between;
+  /* place-content: normal space-between; */
   /* width: 100%; */
 }
 
 button.pricing-calc-tabs {
-  align-items: flex-start;
+  /* align-items: flex-start; */
   appearance: button;
   background-color: #f5f4f4;
   /* background-color: #ffffff; */
@@ -380,13 +396,13 @@ button.pricing-calc-tabs {
   border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-weight: 500;
   line-height: 24px;
   padding: 13.5px 10px;
-  place-items: flex-start normal;
+  /* place-items: flex-start normal; */
   text-align: center;
-  width: 25%;
+  /* width: 25%; */
 }
 
 button.pricing-calc-tabs:hover {
@@ -499,7 +515,7 @@ div#EnterprisePlus.mighty-box {
 h3.plan-name {
   box-sizing: border-box;
   color: #212529;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
@@ -522,7 +538,7 @@ span.pricing-dollar-symbol {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
@@ -532,7 +548,7 @@ span.pricing-dollar-amt {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 72px;
@@ -542,7 +558,7 @@ span.pricing-dollar-amt-snip {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 12px;
   font-weight: 300;
   line-height: 18px;
@@ -561,7 +577,7 @@ span.pricing-savings-percentage-value {
   box-sizing: border-box;
   color: #009928;
   display: inline;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-weight: 300;
   line-height: 24px;
   text-align: left;
@@ -590,7 +606,7 @@ li {
   box-sizing: border-box;
   color: #555550;
   display: list-item;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
@@ -600,7 +616,7 @@ li {
   text-align: left;
 }
 #Fantastic .pricing-feature-list li:first-child:before {
-  content: "+";
+  content: '+';
   position: absolute;
   left: -18px;
 }
@@ -628,7 +644,7 @@ a.pricing-button.box-pricing-button {
   color: #000;
   cursor: pointer;
   display: flex;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-weight: 500;
   justify-content: space-between;
   line-height: 24px;
@@ -746,7 +762,7 @@ div.table-column span {
   box-sizing: border-box;
   color: #323643;
   float: left;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -780,7 +796,7 @@ div.header-row {
 
 p.pricing-table-sub-header {
   box-sizing: border-box;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-weight: 500;
   line-height: 24px;
   margin: 30px 0px 0px;
@@ -809,7 +825,7 @@ a.pricing-para-link {
   color: #212529;
   cursor: pointer;
   display: inline;
-  font-family: "Hero New Regular", sans-serif;
+  font-family: 'Hero New Regular', sans-serif;
   font-weight: 300;
   line-height: 24px;
   text-align: left;
@@ -823,7 +839,7 @@ p.feature-status.pricing-tick {
   text-align: left;
   width: 20px;
   height: 20px;
-  background: url("https://assets.www.happyfox.com/v2/images/pricing-tick.svg")
+  background: url('https://assets.www.happyfox.com/v2/images/pricing-tick.svg')
     no-repeat left top;
   margin: 0;
 }
@@ -831,7 +847,7 @@ p.feature-status.pricing-tick {
 .pricing-no-tick {
   width: 20px;
   height: 20px;
-  background: url("https://assets.www.happyfox.com/v2/images/pricing-no-tick.svg")
+  background: url('https://assets.www.happyfox.com/v2/images/pricing-no-tick.svg')
     no-repeat left top;
   margin: 0;
 }
@@ -881,16 +897,14 @@ p.feature-status.pricing-tick {
   background: #fafafa;
   height: 475px;
   /* position: absolute; */
-  /* width: 100%; */
-  
-
+/* width: 100%; */
 
 div.pricing-questions-section {
   background: linear-gradient(to bottom, #fafafa 60%, #fff 40%);
   /* height: 475px; */
   position: absolute;
   width: 100%;
-  content: "";
+  content: '';
 }
 
 div.pricing-questions-section.pricing-table-features {
@@ -1017,3 +1031,393 @@ h6 {
   font-weight: 500;
   font-size: 16px;
 }
+
+/* @media only screen and (max-width: 1200px) {
+  ul.productnav-menu-list{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 95.5px);
+    z-index: 9;
+    display: none;
+    margin-right: 0;
+    padding: 0 30px;
+  }
+
+  ul.products-list{
+    display: none;
+  }
+
+  .new-container {
+    max-width: 1140px;
+  }
+
+  
+
+} */
+
+/* @media only screen and (max-width: 575px) {
+  
+  .pricing-banner h1{
+    margin: 50px 0px;
+  }
+
+} */
+
+/* @media only screen and (max-width:768px) {
+  .container{
+    max-width: 540px;
+  }
+  .mighty-box{
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+    border-top:1px solid #eee;
+  }
+  
+  
+} */
+
+/* @media only screen and (min-width:770px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .mighty-box {
+    width: 48%; 
+  }
+  .table-title{
+    width: 100%;
+  }
+} */
+
+/* @media only screen and (min-width: 993px) and (max-width:1200px) {
+  .product-bar {
+    padding-top: 10px;
+  }
+  .container{
+    max-width: 960px;
+  }
+  .pricing-calc-tab{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  .pricing-calc-tabs{
+    width: 25%;
+  }
+  .mighty-box{
+    width: 24%;
+  }
+}*/
+
+/* @media only screen and (min-width: 1201px) and (max-width: 1500) {
+  .logo-wrap {
+    width: 18.5%;
+  }
+  .container{
+    max-width: 1140px;
+  }
+}  */
+
+/* @media all and (max-width: 576px){
+  .table-column{
+    width: 48%;
+  }
+
+}
+
+
+@media all and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mighty-box {
+    width: 48%;
+  }
+
+  #titleone.table-title {
+    display: none;
+  }
+
+  .table-title {
+    width: 100%;
+  }
+
+  .header-row,
+  .plain-row {
+    flex-wrap: wrap;
+  }
+
+  .plain-row,
+  .table-title {
+    padding-bottom: 20px;
+  }
+
+  .table-column{
+    width: 24%;
+    padding: 0px 10px;
+  }
+
+  ul.productnav-menu-list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 95.5px);
+    z-index: 9;
+    display: none;
+    margin-right: 0;
+    padding: 0 30px;
+  }
+
+  ul.products-list {
+    display: none;
+  }
+  .product-row{
+    flex-wrap: wrap;
+  }
+
+  .product-showcase{
+    width: 70%;
+    margin: 20px auto 0;
+  }
+}
+@media all and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .mighty-box {
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+  }
+  ul.productnav-menu-list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 95.5px);
+    z-index: 9;
+    display: none;
+    margin-right: 0;
+    padding: 0 30px;
+  }
+
+  ul.products-list {
+    display: none;
+  }
+  #titleone.table-title {
+    display: none;
+  }
+
+  .table-title {
+    width: 100%;
+  }
+
+  .header-row,
+  .plain-row {
+    flex-wrap: wrap;
+  }
+
+  .plain-row,
+  .table-title {
+    padding-bottom: 20px;
+  }
+
+  .table-column{
+    width: 24%;
+    padding: 0px 10px;
+  }
+
+  .product-showcase{
+    width: 90%;
+  }
+}
+@media all and (min-width: 993px) and (max-width: 1200px) {
+  .product-bar {
+    padding-top: 10px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+  .mighty-box {
+    width: 24%;
+  }
+
+  ul.productnav-menu-list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 95.5px);
+    z-index: 9;
+    display: none;
+    margin-right: 0;
+    padding: 0 30px;
+  }
+
+  ul.products-list {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1201px) and (max-width: 1500px) {
+  .pricing-calc-tab {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+
+  .pricing-calc-tabs {
+    width: 25%;
+  }
+  .logo-wrap {
+    width: 18.5%;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+} */
+
+/* Larger screens (1201px to 1500px) */
+@media all and (min-width: 1201px) and (max-width: 1500px) {
+  .pricing-calc-tab {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  .pricing-calc-tabs {
+    width: 25%;
+  }
+  .logo-wrap {
+    width: 18.5%;
+  }
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Larger screens (993px to 1200px) */
+@media all and (min-width: 993px) and (max-width: 1200px) {
+  .product-bar {
+    padding-top: 10px;
+  }
+  .container {
+    max-width: 960px;
+  }
+  .mighty-box {
+    width: 24%;
+  }
+  ul.productnav-menu-list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 95.5px);
+    z-index: 9;
+    display: none;
+    margin-right: 0;
+    padding: 0 30px;
+  }
+  ul.products-list {
+    display: none;
+  }
+}
+
+/* Medium screens (769px to 992px) */
+@media all and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .mighty-box {
+    width: 48%;
+  }
+  #titleone.table-title {
+    display: none;
+  }
+  .table-title {
+    width: 100%;
+  }
+  .header-row,
+  .plain-row {
+    flex-wrap: wrap;
+  }
+  .plain-row,
+  .table-title {
+    padding-bottom: 20px;
+  }
+  .table-column {
+    width: 24%;
+    padding: 0px 10px;
+  }
+  ul.productnav-menu-list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 95.5px);
+    z-index: 9;
+    display: none;
+    margin-right: 0;
+    padding: 0 30px;
+  }
+  ul.products-list {
+    display: none;
+  }
+  .product-row {
+    flex-wrap: wrap;
+  }
+  .product-showcase {
+    width: 70%;
+    margin: 20px auto 0;
+  }
+}
+
+/* Small screens (up to 576px) */
+@media all and (max-width: 576px) {
+  .table-column {
+    width: 48%;
+  }
+}
+
+/* Extra small screens (up to 480px) */
+@media all and (max-width: 480px) {
+  /* ... */
+}
+
+/* Extra large screens (min-width: 1501px and above) */
+@media all and (min-width: 1501px) {
+  /* ... */
+}
+
