@@ -7,6 +7,41 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var questionColumns = document.querySelectorAll(".question-column");
+      questionColumns.forEach(function (questionColumn) {
+        var h6Element = questionColumn.querySelector("h6");
+        var pElement = questionColumn.querySelector("p");
+
+        h6Element.addEventListener("click", function () {
+          if (
+            pElement.style.display === "none" ||
+            pElement.style.display === ""
+          ) {
+            pElement.style.display = "block";
+          } else {
+            pElement.style.display = "none";
+          }
+          pElement.style.transition = "display 0.3s ease-in-out";
+        });
+
+        var knowMoreButton = document.querySelector(".know-more-button");
+        var additionalTablesContainer = document.querySelector(
+          ".additional-table-container"
+        );
+
+        knowMoreButton.addEventListener("click", function () {
+          knowMoreButton.style.display = "none";
+          additionalTablesContainer.style.display = "block";
+        });
+      });
+      const pricingExplainerBlockSecond = document.querySelectorAll(".second");
+      pricingExplainerBlockSecond.addEventListener("click", function () {
+        pricingExplainerBlockSecond.style.backgroundColor = "#fff";
+      });
+    });
+  </script>
   <body>
     <header class="product-bar">
       <div class="new-container">
@@ -130,7 +165,7 @@
                   <h4 class="pricing-explainer-heading">Agent Based Pricing</h4>
                 </a>
 
-                <a href="#" class="pricing-explainer-block">
+                <a href="#" class="pricing-explainer-block second">
                   <h4 class="pricing-explainer-heading">Unlimited Agents</h4>
                 </a>
               </div>
@@ -455,7 +490,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div class="pricing-banner-p">
             <p class="pricing-banner-para">
               All plans require a minimum of 5 help desk agents. Non-profit and
               educational organizations are eligible for a discount.
@@ -669,10 +704,386 @@
                 <div class="table-column">1 TB</div>
                 <div class="table-column">2 TB</div>
               </div>
-              <button class="know-more-button">VIEW ALL <span style="padding-left:3px">+</span></button>
-
+              <button class="know-more-button">
+                VIEW ALL <span style="padding-left: 3px">+</span>
+              </button>
+              <div class="additional-table-container">
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link"
+                        >Unlimited Mailboxes</a
+                      >
+                    </p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link"
+                        >Satisfaction Surveys</a
+                      >
+                    </p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-no-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link">Attachment Store</a>
+                    </p>
+                  </div>
+                  <div class="table-column">50 GB</div>
+                  <div class="table-column">500 GB</div>
+                  <div class="table-column">1 TB</div>
+                  <div class="table-column">2 TB</div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link"
+                        >Unlimited Mailboxes</a
+                      >
+                    </p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link"
+                        >Satisfaction Surveys</a
+                      >
+                    </p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-no-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link">Attachment Store</a>
+                    </p>
+                  </div>
+                  <div class="table-column">50 GB</div>
+                  <div class="table-column">500 GB</div>
+                  <div class="table-column">1 TB</div>
+                  <div class="table-column">2 TB</div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link"
+                        >Unlimited Mailboxes</a
+                      >
+                    </p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link"
+                        >Satisfaction Surveys</a
+                      >
+                    </p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-no-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                  <div class="table-column">
+                    <p class="feature-status pricing-tick"></p>
+                  </div>
+                </div>
+                <div class="plain-row">
+                  <div class="table-title">
+                    <p class="pricing-feature-name">
+                      <a href="#" class="pricing-para-link">Attachment Store</a>
+                    </p>
+                  </div>
+                  <div class="table-column">50 GB</div>
+                  <div class="table-column">500 GB</div>
+                  <div class="table-column">1 TB</div>
+                  <div class="table-column">2 TB</div>
+                </div>
+              </div>
             </div>
-            <p class="star-info-modified">* Planned <br> # Only with custom domain</p>
+            <p class="star-info-modified">
+              * Planned <br />
+              # Only with custom domain
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-questions-section pricing-table-features">
+      <div class="bg-half-gray">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="faq-container">
+                <h3>Frequently Asked Questions</h3>
+                <div class="frequent-questions">
+                  <div class="question-row">
+                    <div class="question-column">
+                      <h6>
+                        Who are help desk agents?
+                        <img
+                          src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
+                          alt="icon"
+                        />
+                      </h6>
+                      <p>
+                        Support agents (help desk staff) who will be actively
+                        managing and responding to tickets raised by contacts.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="question-row">
+                    <div class="question-column">
+                      <h6>
+                        Who are help desk agents?
+                        <img
+                          src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
+                          alt="icon"
+                        />
+                      </h6>
+                      <p>
+                        Support agents (help desk staff) who will be actively
+                        managing and responding to tickets raised by contacts.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="question-row">
+                    <div class="question-column">
+                      <h6>
+                        Who are help desk agents?
+                        <img
+                          src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
+                          alt="icon"
+                        />
+                      </h6>
+                      <p>
+                        Support agents (help desk staff) who will be actively
+                        managing and responding to tickets raised by contacts.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="question-row">
+                    <div class="question-column">
+                      <h6>
+                        Who are help desk agents?
+                        <img
+                          src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
+                          alt="icon"
+                        />
+                      </h6>
+                      <p>
+                        Support agents (help desk staff) who will be actively
+                        managing and responding to tickets raised by contacts.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="question-row">
+                    <div class="question-column">
+                      <h6>
+                        Who are help desk agents?
+                        <img
+                          src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
+                          alt="icon"
+                        />
+                      </h6>
+                      <p>
+                        Support agents (help desk staff) who will be actively
+                        managing and responding to tickets raised by contacts.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="question-row">
+                    <div class="question-column">
+                      <h6>
+                        Who are help desk agents?
+                        <img
+                          src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
+                          alt="icon"
+                        />
+                      </h6>
+                      <p>
+                        Support agents (help desk staff) who will be actively
+                        managing and responding to tickets raised by contacts.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pricing-more-products">
+      <div class="new-container">
+        <div class="col-md-12">
+          <h2>More From HappyFox</h2>
+          <div class="product-row">
+            <div class="product-showcase">
+              <img
+                src="//assets.www.happyfox.com/v2/images/pricing-lc.svg"
+                alt="icon"
+              />
+              <h4>Live Chat</h4>
+              <p>
+                Chat with your customers instantly on mobile, desktop, and web.
+              </p>
+              <a href="#"
+                >Start free trial
+                <img
+                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  alt="icon"
+                />
+              </a>
+            </div>
+            <div class="product-showcase">
+              <img
+                src="//assets.www.happyfox.com/v2/images/pricing-cb.svg"
+                alt="icon"
+              />
+              <h4>Chatbot</h4>
+              <p>
+                Engage and reach your customers 24x7 with ready-to-go chatbots.
+              </p>
+              <a href="#"
+                >Get a Demo
+                <img
+                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  alt="icon"
+                />
+              </a>
+            </div>
+            <div class="product-showcase">
+              <img
+                src="//assets.www.happyfox.com/v2/images/pricing-ai.svg"
+                alt="icon"
+              />
+              <h4>Assist AI</h4>
+              <p>Provide IT support directly from Slack and Microsoft Teams.</p>
+              <a href="#"
+                >Get a Demo
+                <img
+                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="product-row">
+            <div class="product-showcase">
+              <img
+                src="//assets.www.happyfox.com/v2/images/pricing-bi.svg"
+                alt="icon"
+              />
+              <h4>Business Intelligence</h4>
+              <p>
+                Turn insight into advantage with cross-functional reports &amp;
+                dashboards.
+              </p>
+              <a href="#"
+                >Get a Demo
+                <img
+                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  alt="icon"
+              /></a>
+            </div>
+            <div class="product-showcase">
+              <img
+                src="//assets.www.happyfox.com/v2/images/pricing-wa.svg"
+                alt="icon"
+              />
+              <h4>Workflow Automation</h4>
+              <p>Reduce the grunt work with end-to-end process automation.</p>
+              <a href="#"
+                >Get a Demo
+                <img
+                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  alt="icon"
+              /></a>
+            </div>
+            <div class="product-showcase">
+              <!-- <img
+                src="//assets.www.happyfox.com/v2/images/pricing-wa.svg"
+                alt="icon"
+              />
+              <h4>Workflow Automation</h4>
+              <p>Reduce the grunt work with end-to-end process automation.</p>
+              <a href="#"
+                >Get a Demo
+                <img
+                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  alt="icon"
+              /></a> -->
+            </div>
           </div>
         </div>
       </div>

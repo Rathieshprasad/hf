@@ -1,17 +1,17 @@
 @font-face {
   font-family: "'Hero New Regular'";
-  src: local('Hero New Regular'), url('./Hero New Regular.woff') format('woff');
+  src: local("Hero New Regular"), url("./Hero New Regular.woff") format("woff");
 }
 @font-face {
-  font-family: 'Hero New Thin';
-  src: local('Hero New Thin'), url('/Hero New Thin.woff') format('woff');
+  font-family: "Hero New Thin";
+  src: local("Hero New Thin"), url("/Hero New Thin.woff") format("woff");
 }
 
 * {
   margin: 0;
 }
 body {
-  font-family: 'Hero New Regular';
+  font-family: "Hero New Regular";
 }
 
 header.product-bar {
@@ -28,7 +28,16 @@ header.product-bar {
   max-width: 1140px;
   padding: 0px 15px;
   display: flex;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center;
+}
+
+.new-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
 }
 
 .product-bar-wrap {
@@ -60,7 +69,7 @@ header.product-bar {
   border-bottom: 0px;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -89,7 +98,7 @@ ul.products-list {
   color: #181c20;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 13px;
   line-height: 24px;
   padding: 7px 10px;
@@ -157,7 +166,7 @@ img#Navbarlogo.productnav-logo {
 span.productnav-logo-text {
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 25px;
   line-height: 37.5px;
   margin: 0px 0px 0px 12px;
@@ -196,13 +205,16 @@ span.productnav-menu-text {
   color: #181c20;
   cursor: pointer;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-weight: 500;
   line-height: 24px;
   list-style-type: none;
   padding: 7px 10px;
   position: relative;
   text-align: left;
+}
+span.productnav-menu-text:hover {
+  background: rgb(255, 255, 255, 0.8);
 }
 
 a.productnav-link {
@@ -225,7 +237,7 @@ button.productnav-btn {
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
@@ -239,7 +251,7 @@ button.productnav-btn {
 }
 
 div.pricing-banner {
-  background-image: url('https://assets.www.happyfox.com/v2/images/pricing-new-banner-bg-new.png');
+  background-image: url("https://assets.www.happyfox.com/v2/images/pricing-new-banner-bg-new.png");
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
@@ -261,7 +273,7 @@ div.col-md-12 {
 
 h1 {
   box-sizing: border-box;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 48px;
@@ -302,6 +314,14 @@ a.pricing-explainer-block {
   width: 48%;
 }
 
+a.pricing-explainer-block.second {
+  background-color: #ffeada;
+}
+
+a.pricing-explainer-block.second:hover {
+  background-color: #fff;
+}
+
 div.container {
   max-width: 1140px;
   width: 100%;
@@ -316,13 +336,13 @@ div.row {
   margin-left: -15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 h4.pricing-explainer-heading {
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-weight: 500;
   line-height: 19.2px;
   margin: 0px 0px 5px 0px;
@@ -360,7 +380,7 @@ button.pricing-calc-tabs {
   border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-weight: 500;
   line-height: 24px;
   padding: 13.5px 10px;
@@ -463,6 +483,10 @@ div#EnterprisePlus.mighty-box {
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
+/* .mighty-box:hover + .box-pricing-button:hover {
+  background-color: #ff3a3a;
+  color: #eee;
+} */
 .pricing-popular {
   margin-top: -25px;
   text-align: left;
@@ -475,7 +499,7 @@ div#EnterprisePlus.mighty-box {
 h3.plan-name {
   box-sizing: border-box;
   color: #212529;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
@@ -498,7 +522,7 @@ span.pricing-dollar-symbol {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
@@ -508,7 +532,7 @@ span.pricing-dollar-amt {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 72px;
@@ -518,7 +542,7 @@ span.pricing-dollar-amt-snip {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 12px;
   font-weight: 300;
   line-height: 18px;
@@ -537,7 +561,7 @@ span.pricing-savings-percentage-value {
   box-sizing: border-box;
   color: #009928;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-weight: 300;
   line-height: 24px;
   text-align: left;
@@ -566,7 +590,7 @@ li {
   box-sizing: border-box;
   color: #555550;
   display: list-item;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
@@ -576,7 +600,7 @@ li {
   text-align: left;
 }
 #Fantastic .pricing-feature-list li:first-child:before {
-  content: '+';
+  content: "+";
   position: absolute;
   left: -18px;
 }
@@ -604,7 +628,7 @@ a.pricing-button.box-pricing-button {
   color: #000;
   cursor: pointer;
   display: flex;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-weight: 500;
   justify-content: space-between;
   line-height: 24px;
@@ -617,14 +641,25 @@ a.pricing-button.box-pricing-button {
   text-decoration: none;
 }
 
-a.pricing-button.box-pricing-button:hover{
+a.pricing-button.box-pricing-button:hover {
   background-color: #ff3a3a;
-  color: #eee;
+  color: #fff;
 }
+
+/* div#mightybox.mighty-box:hover a.pricing-button-container,
+div#Fantastic.mighty-box:hover a.pricing-button-container,
+div#Enterprise.mighty-box:hover .pricing-button-container,
+div#EnterprisePlus.mighty-box:hover .pricing-button-container {
+  background-color: red;
+} */
 
 svg {
   overflow: hidden;
   vertical-align: middle;
+}
+
+.pricing-banner-p {
+  width: 100%;
 }
 .pricing-banner-para {
   margin: 80px auto 40px;
@@ -635,7 +670,18 @@ svg {
   border-radius: 16px;
   padding: 14px 0 12px;
   background: #f9f9f9;
+  clear: both;
 }
+/* .pricing-banner-para {
+  margin: 80px auto 40px; 
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  max-width: 570px;
+  border-radius: 16px;
+  padding: 14px 0 12px;
+  background: #f9f9f9;
+} */
 
 .compare-plans-icon {
   margin: auto;
@@ -700,7 +746,7 @@ div.table-column span {
   box-sizing: border-box;
   color: #323643;
   float: left;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -734,7 +780,7 @@ div.header-row {
 
 p.pricing-table-sub-header {
   box-sizing: border-box;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-weight: 500;
   line-height: 24px;
   margin: 30px 0px 0px;
@@ -763,7 +809,7 @@ a.pricing-para-link {
   color: #212529;
   cursor: pointer;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  font-family: "Hero New Regular", sans-serif;
   font-weight: 300;
   line-height: 24px;
   text-align: left;
@@ -777,7 +823,7 @@ p.feature-status.pricing-tick {
   text-align: left;
   width: 20px;
   height: 20px;
-  background: url('https://assets.www.happyfox.com/v2/images/pricing-tick.svg')
+  background: url("https://assets.www.happyfox.com/v2/images/pricing-tick.svg")
     no-repeat left top;
   margin: 0;
 }
@@ -785,7 +831,7 @@ p.feature-status.pricing-tick {
 .pricing-no-tick {
   width: 20px;
   height: 20px;
-  background: url('https://assets.www.happyfox.com/v2/images/pricing-no-tick.svg')
+  background: url("https://assets.www.happyfox.com/v2/images/pricing-no-tick.svg")
     no-repeat left top;
   margin: 0;
 }
@@ -803,6 +849,13 @@ p.feature-status.pricing-tick {
   border: none;
 }
 
+.additional-table-container > div:nth-child(odd) {
+  background: #fafafa;
+}
+.additional-table-container > div:nth-child(even) {
+  background: #fff;
+}
+
 .know-more-button {
   color: #323643;
   display: inline-block;
@@ -815,7 +868,152 @@ p.feature-status.pricing-tick {
   background: 0 0;
 }
 
-.star-info-modified{
+.additional-table-container {
+  display: none;
+}
+
+.star-info-modified {
   padding: 30px 0px 30px 15px;
   color: #9b9b9b;
+}
+
+/* div.bg-half-gray {
+  background: #fafafa;
+  height: 475px;
+  /* position: absolute; */
+  /* width: 100%; */
+  
+
+
+div.pricing-questions-section {
+  background: linear-gradient(to bottom, #fafafa 60%, #fff 40%);
+  /* height: 475px; */
+  position: absolute;
+  width: 100%;
+  content: "";
+}
+
+div.pricing-questions-section.pricing-table-features {
+  box-sizing: border-box;
+  position: relative;
+}
+
+div.faq-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px;
+  box-sizing: border-box;
+  margin: 60px 0px 0px;
+  padding: 60px 100px;
+}
+
+h3 {
+  box-sizing: border-box;
+  color: #323643;
+  font-family: hero-new, sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.4px;
+  margin: 10px 0px 60px;
+  text-align: center;
+}
+
+div.question-column {
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 30px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div.question-column img {
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: clip;
+  vertical-align: middle;
+}
+
+h6 {
+  font-size: 16px;
+  color: #000;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-family: hero-new, sans-serif;
+  font-weight: 500;
+  justify-content: space-between;
+  line-height: 19.2px;
+  place-content: normal space-between;
+  place-items: center normal;
+  text-align: left;
+}
+
+.question-column p {
+  display: none;
+  font-size: 16px;
+  color: #6d717e;
+  line-height: 30px;
+  font-weight: 300;
+  /* margin-top: 12px; */
+  margin: 12px 0px 0px 0px;
+  text-align: left;
+}
+
+.pricing-more-products {
+  margin: 150px 0px 70px;
+}
+
+.pricing-more-products h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: center;
+  width: 95%;
+  margin: 0 auto 80px;
+}
+
+.product-row + .product-row {
+  justify-content: flex-start;
+}
+
+.product-showcase {
+  width: 33%;
+  border-radius: 16px;
+  padding: 35px 70px;
+  border: 1px solid #fff;
+}
+
+.product-showcase:hover {
+  border: 1px solid #dadada;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.08);
+}
+.product-showcase > img {
+  margin-bottom: 25px;
+}
+
+.product-showcase > h4 {
+  font-size: 24px;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.product-showcase > p {
+  font-size: 16px;
+  color: #555;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.product-showcase > a {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
 }
