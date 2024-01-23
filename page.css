@@ -1,17 +1,139 @@
+/* New Hero Thin */
 @font-face {
-  font-family: "'Hero New Regular'";
-  src: local('Hero New Regular'), url('./Hero New Regular.woff') format('woff');
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
 }
 @font-face {
-  font-family: 'Hero New Thin';
-  src: local('Hero New Thin'), url('/Hero New Thin.woff') format('woff');
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Thin Italic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* New Hero UltraLight */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Ultra Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Ultra Light Italic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* New Hero Light */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('./fonts/Hero Light Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* New Hero Regular */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Regular Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* New Hero Medium */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Medium Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* New Hero SemiBold */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero SemiBold Italic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* New Hero Bold */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/NewHeroBoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* New Hero ExtraBold */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/NewHeroExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero ExtraBold Italic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* New Hero Super */
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero Super.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'New Hero';
+  src: url('fonts/New Hero SuperItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+* {
+  font-family: 'New Hero', sans-serif;
 }
 
 * {
   margin: 0;
 }
 body {
-  font-family: 'Hero New Regular';
+  font-family: 'New Hero';
+  font-weight: 400;
+  /* font-style: italic; */
   margin: 0;
 }
 
@@ -78,7 +200,7 @@ nav.product-bar-products {
   border-bottom: 0px;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Medium', sans-serif; */
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -107,7 +229,8 @@ ul.products-list {
   color: #181c20;
   cursor: pointer;
   display: inline-block;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
+  font-weight: 200;
   font-size: 13px;
   line-height: 24px;
   padding: 7px 10px;
@@ -175,7 +298,8 @@ img#Navbarlogo.productnav-logo {
 span.productnav-logo-text {
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Thin', sans-serif; */
+  font-weight: 300;
   font-size: 25px;
   line-height: 37.5px;
   margin: 0px 0px 0px 12px;
@@ -220,8 +344,8 @@ span.productnav-menu-text {
   color: #181c20;
   cursor: pointer;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
-  font-weight: 500;
+  /* font-family: 'New Hero', sans-serif; */
+  font-weight: 400;
   line-height: 24px;
   list-style-type: none;
   padding: 7px 10px;
@@ -288,7 +412,7 @@ div.col-md-12 {
 
 h1 {
   box-sizing: border-box;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
   font-size: 40px;
   font-weight: 500;
   line-height: 48px;
@@ -357,7 +481,7 @@ div.row {
 h4.pricing-explainer-heading {
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
   font-weight: 500;
   line-height: 19.2px;
   margin: 0px 0px 5px 0px;
@@ -389,6 +513,7 @@ section.agent-pricing-bg-wrap {
 
 button.pricing-calc-tabs {
   /* align-items: flex-start; */
+  font-size: inherit;
   appearance: button;
   background-color: #f5f4f4;
   /* background-color: #ffffff; */
@@ -396,8 +521,8 @@ button.pricing-calc-tabs {
   border-radius: 10px;
   box-sizing: border-box;
   cursor: pointer;
-  font-family: 'Hero New Regular', sans-serif;
-  font-weight: 500;
+  /* font-family: 'Hero New Regular', sans-serif; */
+  font-weight: 300;
   line-height: 24px;
   padding: 13.5px 10px;
   /* place-items: flex-start normal; */
@@ -405,12 +530,22 @@ button.pricing-calc-tabs {
   /* width: 25%; */
 }
 
+button.pricing-calc-tabs.active {
+  background-color: #fff;
+  border: 1px solid #c8c7c7;
+  font-weight: 500;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  /* font-family: 'Hero New Medium'; */
+}
+
 button.pricing-calc-tabs:hover {
   background-color: #fff;
   border: 1px solid #c8c7c7;
-  font-weight: bold;
+  font-weight: 500;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
+  /* font-family: 'Hero New Medium'; */
 }
 
 div.agent-pricing {
@@ -495,14 +630,35 @@ div#EnterprisePlus.mighty-box {
   transition-timing-function: ease-in;
 }
 .mighty-box:hover {
+  /* border-radius:0px 0px 10px 10px; */
   box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
 }
+.mighty-box:hover .pricing-button.box-pricing-button {
+  background-color: red;
+  color:#fff
+}
+
+.mighty-box:hover svg polyline {
+  stroke: white;
+}
+
+
+
+
 /* .mighty-box:hover + .box-pricing-button:hover {
   background-color: #ff3a3a;
   color: #eee;
 } */
+.pricing-button svg {
+  stroke: black;
+  transition: stroke 0.3s ease;
+}
+
+.pricing-button:hover svg {
+  stroke: white;
+}
 .pricing-popular {
   margin-top: -25px;
   text-align: left;
@@ -515,7 +671,7 @@ div#EnterprisePlus.mighty-box {
 h3.plan-name {
   box-sizing: border-box;
   color: #212529;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Medium', sans-serif; */
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
@@ -538,7 +694,7 @@ span.pricing-dollar-symbol {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Medium', sans-serif; */
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
@@ -548,7 +704,7 @@ span.pricing-dollar-amt {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Medium', sans-serif; */
   font-size: 48px;
   font-weight: 500;
   line-height: 72px;
@@ -558,19 +714,24 @@ span.pricing-dollar-amt-snip {
   box-sizing: border-box;
   color: #212529;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
   font-size: 12px;
   font-weight: 300;
   line-height: 18px;
   text-align: left;
 }
 
+span.pricing-dollar-amount-snip {
+  font-size: 12px;
+}
+
 div.pricing-savings-percentage {
   box-sizing: border-box;
   display: flex;
-  margin: 0px 0px 10px;
-  padding: 0px 0px 20px;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 20px 0px;
   position: relative;
+  border-bottom: 1px solid #eee;
 }
 
 span.pricing-savings-percentage-value {
@@ -606,7 +767,7 @@ li {
   box-sizing: border-box;
   color: #555550;
   display: list-item;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
   font-size: 14px;
   font-weight: 300;
   line-height: 21px;
@@ -621,6 +782,26 @@ li {
   left: -18px;
 }
 #Fantastic .pricing-feature-list li:first-child {
+  list-style: none;
+  font-weight: 500;
+  position: relative;
+}
+#Enterprise .pricing-feature-list li:first-child:before {
+  content: '+';
+  position: absolute;
+  left: -18px;
+}
+#Enterprise .pricing-feature-list li:first-child {
+  list-style: none;
+  font-weight: 500;
+  position: relative;
+}
+#EnterprisePlus .pricing-feature-list li:first-child:before {
+  content: '+';
+  position: absolute;
+  left: -18px;
+}
+#EnterprisePlus .pricing-feature-list li:first-child {
   list-style: none;
   font-weight: 500;
   position: relative;
@@ -644,7 +825,7 @@ a.pricing-button.box-pricing-button {
   color: #000;
   cursor: pointer;
   display: flex;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
   font-weight: 500;
   justify-content: space-between;
   line-height: 24px;
@@ -681,6 +862,8 @@ svg {
   margin: 80px auto 40px;
   font-size: 16px;
   font-weight: 300;
+  line-height: 1.5;
+  /* font-family: 'Hero New Regular'; */
   text-align: center;
   max-width: 570px;
   border-radius: 16px;
@@ -714,6 +897,11 @@ svg {
   background: #f8f8f8;
 }
 
+div.header-title{
+  font-size: 20px;
+  font-weight: 400;
+}
+
 p.header-title {
   font-size: 20px;
   font-weight: 400;
@@ -727,7 +915,7 @@ p.header-title {
 div.pricing-comparison-table.open-table {
   box-sizing: border-box;
   max-height: 15000px;
-  padding: 20px 0px 0px;
+  padding: 20px 0px 0px 0px;
   position: relative;
   transform: matrix(1, 0, 0, 1, 0, 0);
   transition-duration: 0.3s;
@@ -740,6 +928,8 @@ div#pricingsticker.pricing-table-header {
   box-sizing: border-box;
   position: sticky;
   top: 54px;
+  left: 0;
+  right: 0;
   z-index: 9;
 }
 
@@ -753,6 +943,7 @@ div.col-md-12.header-row {
   max-width: 100%;
   min-height: 1px;
   padding: 30px 0px 20px;
+  margin-bottom: 0;
   place-content: normal space-between;
   position: relative;
   border-bottom: 1px solid rgba(152, 157, 173, 0.2);
@@ -762,7 +953,7 @@ div.table-column span {
   box-sizing: border-box;
   color: #323643;
   float: left;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
@@ -796,7 +987,8 @@ div.header-row {
 
 p.pricing-table-sub-header {
   box-sizing: border-box;
-  font-family: 'Hero New Regular', sans-serif;
+  /* font-family: 'Hero New Regular', sans-serif; */
+  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   margin: 30px 0px 0px;
@@ -806,7 +998,7 @@ p.pricing-table-sub-header {
 div.table-column {
   width: 16%;
   font-size: 16px;
-  color: #787979;
+  color: #797879;
   font-weight: 300;
   box-sizing: border-box;
 }
@@ -819,16 +1011,40 @@ div.plain-row {
   padding: 13px 0px;
   place-content: normal space-between;
 }
+/* .plain-row:hover{
+  background-color: #f7f7f7;
+  border-left: none;
+  border-right: none;
+} */
+/* .col-md-12.color-tracker.plain-row:hover {
+  background: red;
+} */
+
+.plan-title{
+  font-size: 20px;
+  font-weight: 500;
+  float: left;
+  width: 100%;
+  color: #323643;
+}
+
+.plan-title span:first-child {
+  width: 100%;
+  float: left;
+}
 
 a.pricing-para-link {
+  color: #323643;
+  border-bottom: 0.5px dotted #323643;
   box-sizing: border-box;
-  color: #212529;
+  /* color: #212529; */
   cursor: pointer;
   display: inline;
-  font-family: 'Hero New Regular', sans-serif;
-  font-weight: 300;
+  /* font-family: 'Hero New Regular', sans-serif; */
+  font-weight: 200;
   line-height: 24px;
   text-align: left;
+  text-decoration: none;
 }
 
 a.pricing-para-link:hover {
@@ -856,8 +1072,20 @@ p.feature-status.pricing-tick {
   background: #fafafa;
 }
 
+.col-md-12.color-tracker > div:nth-child(odd):hover {
+  background: #f7f7f7;
+  border-left: none;
+  border-right: none;
+}
+
 .col-md-12.color-tracker > div:nth-child(even) {
   background: #fff;
+}
+
+.col-md-12.color-tracker > div:nth-child(even):hover {
+  background: #f7f7f7;
+  border-left: none;
+  border-right: none;
 }
 
 .col-md-12.color-tracker > div:nth-child(odd).header-row {
@@ -865,11 +1093,26 @@ p.feature-status.pricing-tick {
   border: none;
 }
 
+.col-md-12.color-tracker > div:nth-child(odd).header-row:hover {
+  background: #f7f7f7;
+  border-left: none;
+  border-right: none;}
+
 .additional-table-container > div:nth-child(odd) {
   background: #fafafa;
 }
 .additional-table-container > div:nth-child(even) {
   background: #fff;
+}
+.additional-table-container > div:nth-child(odd):hover {
+  background: #f7f7f7;
+  border-left: none;
+  border-right: none;
+}
+.additional-table-container > div:nth-child(even):hover {
+  background: #f7f7f7;
+  border-left: none;
+  border-right: none;
 }
 
 .know-more-button {
@@ -891,6 +1134,9 @@ p.feature-status.pricing-tick {
 .star-info-modified {
   padding: 30px 0px 30px 15px;
   color: #9b9b9b;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 /* div.bg-half-gray {
@@ -924,7 +1170,7 @@ div.faq-container {
 h3 {
   box-sizing: border-box;
   color: #323643;
-  font-family: hero-new, sans-serif;
+  /* font-family: hero-new, sans-serif; */
   font-size: 32px;
   font-weight: 500;
   line-height: 38.4px;
@@ -946,6 +1192,9 @@ div.question-column img {
   vertical-align: middle;
 }
 
+.arrow-rotate{
+  transform:rotate(180deg)
+}
 h6 {
   font-size: 16px;
   color: #000;
@@ -953,7 +1202,7 @@ h6 {
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
-  font-family: hero-new, sans-serif;
+  /* font-family: hero-new, sans-serif; */
   font-weight: 500;
   justify-content: space-between;
   line-height: 19.2px;
@@ -981,6 +1230,9 @@ h6 {
   text-align: center;
   font-size: 32px;
   margin-bottom: 70px;
+  color: inherit;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .product-row {
@@ -999,7 +1251,7 @@ h6 {
 .product-showcase {
   width: 33%;
   border-radius: 16px;
-  padding: 35px 70px;
+  padding: 35px 20px;
   border: 1px solid #fff;
 }
 
@@ -1013,6 +1265,7 @@ h6 {
 
 .product-showcase > h4 {
   font-size: 24px;
+  /* font-family: 'Hero New Medium'; */
   color: #000;
   font-weight: 500;
   margin-bottom: 15px;
@@ -1029,7 +1282,9 @@ h6 {
 .product-showcase > a {
   color: #000;
   font-weight: 500;
+  /* font-family: 'Hero New Medium'; */
   font-size: 16px;
+  text-decoration: none;
 }
 
 /* @media only screen and (max-width: 1200px) {
@@ -1318,6 +1573,14 @@ h6 {
   .container {
     max-width: 1140px;
   }
+  .container.product-bar{
+    margin-right:150px;
+    margin-left:150px;
+  }
+}
+.container.pricing-comparison-wrapper{
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 /* Larger screens (993px to 1200px) */
@@ -1347,6 +1610,35 @@ h6 {
   ul.products-list {
     display: none;
   }
+  /* .product-bar-toggle {
+    cursor: pointer;
+    display: block;
+    order: 0;
+    margin-right: 8px;
+    padding: 9px 5px 9px 0;
+    min-width: 18px;
+    height: 30px;
+  }
+  .product-bar-toggle span {
+    display: block;
+    margin-bottom: 3px;
+    height: 2px;
+    width: 11px;
+    background: #000;
+    border-radius: 9px;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    transition: 0.4s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo-wrap{
+    max-width: 100%;
+    align-items: center;
+    display: flex;
+    width: 30%;
+  } */
 }
 
 /* Medium screens (769px to 992px) */
@@ -1404,20 +1696,87 @@ h6 {
   }
 }
 
-/* Small screens (up to 576px) */
-@media all and (max-width: 576px) {
+@media all and (max-width: 768px) {
+  .product-bar-link {
+    padding: 7px 0px;
+  }
+  .container {
+    max-width: 540px;
+  }
+
   .table-column {
     width: 48%;
+  }
+  .mighty-box {
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+  }
+  ul.productnav-menu-list {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 95.5px);
+    z-index: 9;
+    display: none;
+    margin-right: 0;
+    padding: 0 30px;
+  }
+
+  ul.products-list {
+    display: none;
+  }
+  #titleone.table-title {
+    display: none;
+  }
+
+  .table-title {
+    width: 100%;
+  }
+
+  .header-row,
+  .plain-row {
+    flex-wrap: wrap;
+  }
+
+  .plain-row,
+  .table-title {
+    padding-bottom: 20px;
+  }
+
+  .table-column {
+    width: 24%;
+    padding: 0px 10px;
+  }
+
+  .product-row {
+    flex-wrap: wrap;
+  }
+
+  .product-showcase {
+    width: 90%;
   }
 }
 
 /* Extra small screens (up to 480px) */
-@media all and (max-width: 480px) {
+@media all and (max-width: 576px) {
   /* ... */
+  .container {
+    max-width: 420px;
+  }
+  .product-bar-link {
+    width: 40px;
+  }
+  .table-column {
+    width: 48%;
+  }
 }
 
 /* Extra large screens (min-width: 1501px and above) */
 @media all and (min-width: 1501px) {
   /* ... */
 }
-

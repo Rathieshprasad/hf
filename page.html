@@ -6,16 +6,35 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <script>
-    window.onload = function () {}
-    // const targetElement = document.getElementById("mighty")
-    // const unlimitedAgents = document.getElementById("unlimited-agents")
+    var mightyBoxes = document.querySelectorAll(".mighty-box")
 
-    // unlimitedAgents.addEventListener("click", function (event) {
-    //   event.preventDefault()
-    //   targetElement.innerHTML = "Starter"
-    // })
+    mightyBoxes.forEach(function (mightyBox) {
+      mightyBox.addEventListener("mouseover", function () {
+        var pricingButton = mightyBox.querySelector(
+          ".pricing-button.box-pricing-button"
+        )
+        pricingButton.style.backgroundColor = "red"
+      })
+
+      mightyBox.addEventListener("mouseout", function () {
+        var pricingButton = mightyBox.querySelector(
+          ".pricing-button.box-pricing-button"
+        )
+        pricingButton.style.backgroundColor = ""
+      })
+    })
+
+    function toggleActive(button) {
+      document.querySelectorAll(".pricing-calc-tabs").forEach((btn) => {
+        btn.classList.remove("active")
+      })
+
+      button.classList.add("active")
+    }
+    window.onload = function () {}
     document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("unlimited-agents").onclick = function () {
         document.getElementById("mighty").innerHTML = "Starter"
@@ -59,20 +78,24 @@
       }
 
       var questionColumns = document.querySelectorAll(".question-column")
+
       questionColumns.forEach(function (questionColumn) {
         var h6Element = questionColumn.querySelector("h6")
         var pElement = questionColumn.querySelector("p")
+        var downArrow = questionColumn.querySelector("#down-arrow")
 
         h6Element.addEventListener("click", function () {
           if (
             pElement.style.display === "none" ||
             pElement.style.display === ""
           ) {
+            downArrow.classList.add("arrow-rotate")
             pElement.style.display = "block"
           } else {
+            downArrow.classList.remove("arrow-rotate")
             pElement.style.display = "none"
           }
-          pElement.style.transition = "display 0.3s ease-in-out"
+          pElement.style.transition = "display 1000s ease-out 3s"
         })
 
         var knowMoreButton = document.querySelector(".know-more-button")
@@ -92,6 +115,12 @@
       <div class="container">
         <div class="product-bar-wrap">
           <div class="logo-wrap">
+            <div class="product-bar-toggle">
+              <!-- <span></span>
+              <span></span>
+              <span></span> -->
+              <!-- <img src="https://www.clipartmax.com/png/middle/333-3335189_menu-three-horizontal-lines-symbol-free-icon-logos-with-horizontal-lines.png" alt=""> -->
+            </div>
             <a href="#" class="product-bar-link">
               <img
                 id="hfTopbarlogo"
@@ -216,7 +245,7 @@
                     class="pricing-explainer-heading"
                     id="agent-based-pricing"
                   >
-                    Agent Based Pricing
+                    Agent-based pricing
                   </h4>
                 </a>
 
@@ -239,19 +268,34 @@
       <div class="container pricing-comparison-wrapper">
         <div class="row agent-pricing">
           <div class="pricing-calc-tab">
-            <button class="pricing-calc-tabs" data-val="Monthly" id="monthly">
-              Monthly</button
-            ><button class="pricing-calc-tabs" data-val="Annual">Annual</button
-            ><button
+            <button
               class="pricing-calc-tabs active"
+              onclick="toggleActive(this)"
+              data-val="Monthly"
+              id="monthly"
+            >
+              Monthly</button
+            ><button
+              class="pricing-calc-tabs"
+              data-val="Annual"
+              onclick="toggleActive(this)"
+            >
+              Annual</button
+            ><button
+              class="pricing-calc-tabs"
               data-val="2 Year Savings Plan (paid upfront)"
+              onclick="toggleActive(this)"
             >
               2-Year Savings Plan<br /><span
                 class="pricing-dollar-amount-snip"
                 style="margin-top: 0px; display: block"
                 >Paid Up-Front</span
               ></button
-            ><button class="pricing-calc-tabs" data-val="3 Year Contract">
+            ><button
+              class="pricing-calc-tabs"
+              onclick="toggleActive(this)"
+              data-val="3 Year Contract"
+            >
               3-Year Contract<br /><span
                 class="pricing-dollar-amount-snip"
                 style="margin-top: 0px; display: block"
@@ -563,12 +607,12 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="pricing-banner-p">
-            <p class="pricing-banner-para">
-              All plans require a minimum of 5 help desk agents. Non-profit and
-              educational organizations are eligible for a discount.
-            </p>
+            <!-- <div class="pricing-banner-p"> -->
+              <p class="pricing-banner-para">
+                All plans require a minimum of 5 help desk agents. Non-profit
+                and educational organizations are eligible for a discount.
+              </p>
+            <!-- </div> -->
           </div>
         </div>
       </div>
@@ -964,6 +1008,7 @@
                       <h6>
                         Who are help desk agents?
                         <img
+                          id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
                           alt="icon"
                         />
@@ -979,6 +1024,7 @@
                       <h6>
                         Who are help desk agents?
                         <img
+                          id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
                           alt="icon"
                         />
@@ -994,6 +1040,7 @@
                       <h6>
                         Who are help desk agents?
                         <img
+                          id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
                           alt="icon"
                         />
@@ -1009,6 +1056,7 @@
                       <h6>
                         Who are help desk agents?
                         <img
+                          id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
                           alt="icon"
                         />
@@ -1024,6 +1072,7 @@
                       <h6>
                         Who are help desk agents?
                         <img
+                          id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
                           alt="icon"
                         />
@@ -1058,94 +1107,98 @@
     </div>
 
     <div class="pricing-more-products">
-      <div class="new-container">
-        <div class="col-md-12">
-          <h2>More From HappyFox</h2>
-          <div class="product-row">
-            <div class="product-showcase">
-              <img
-                src="//assets.www.happyfox.com/v2/images/pricing-lc.svg"
-                alt="icon"
-              />
-              <h4>Live Chat</h4>
-              <p>
-                Chat with your customers instantly on mobile, desktop, and web.
-              </p>
-              <a href="#"
-                >Start free trial
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2>More From HappyFox</h2>
+            <div class="product-row">
+              <div class="product-showcase">
                 <img
-                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  src="//assets.www.happyfox.com/v2/images/pricing-lc.svg"
                   alt="icon"
                 />
-              </a>
-            </div>
-            <div class="product-showcase">
-              <img
-                src="//assets.www.happyfox.com/v2/images/pricing-cb.svg"
-                alt="icon"
-              />
-              <h4>Chatbot</h4>
-              <p>
-                Engage and reach your customers 24x7 with ready-to-go chatbots.
-              </p>
-              <a href="#"
-                >Get a Demo
+                <h4>Live Chat</h4>
+                <p>
+                  Chat with your customers instantly on mobile, desktop and web.
+                </p>
+                <a href="#"
+                  >Start free trial
+                  <img
+                    src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                    alt="icon"
+                  />
+                </a>
+              </div>
+              <div class="product-showcase">
                 <img
-                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  src="//assets.www.happyfox.com/v2/images/pricing-cb.svg"
                   alt="icon"
                 />
-              </a>
-            </div>
-            <div class="product-showcase">
-              <img
-                src="//assets.www.happyfox.com/v2/images/pricing-ai.svg"
-                alt="icon"
-              />
-              <h4>Assist AI</h4>
-              <p>Provide IT support directly from Slack and Microsoft Teams.</p>
-              <a href="#"
-                >Get a Demo
+                <h4>Chatbot</h4>
+                <p>
+                  Engage and reach your customers 24x7 with ready-to-go
+                  chatbots.
+                </p>
+                <a href="#"
+                  >Get a Demo
+                  <img
+                    src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                    alt="icon"
+                  />
+                </a>
+              </div>
+              <div class="product-showcase">
                 <img
-                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  src="//assets.www.happyfox.com/v2/images/pricing-ai.svg"
                   alt="icon"
                 />
-              </a>
+                <h4>Assist AI</h4>
+                <p>
+                  Provide IT support directly from Slack and Microsoft Teams.
+                </p>
+                <a href="#"
+                  >Get a Demo
+                  <img
+                    src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                    alt="icon"
+                  />
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="product-row">
-            <div class="product-showcase">
-              <img
-                src="//assets.www.happyfox.com/v2/images/pricing-bi.svg"
-                alt="icon"
-              />
-              <h4>Business Intelligence</h4>
-              <p>
-                Turn insight into advantage with cross-functional reports &amp;
-                dashboards.
-              </p>
-              <a href="#"
-                >Get a Demo
+            <div class="product-row">
+              <div class="product-showcase">
                 <img
-                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  src="//assets.www.happyfox.com/v2/images/pricing-bi.svg"
                   alt="icon"
-              /></a>
-            </div>
-            <div class="product-showcase">
-              <img
-                src="//assets.www.happyfox.com/v2/images/pricing-wa.svg"
-                alt="icon"
-              />
-              <h4>Workflow Automation</h4>
-              <p>Reduce the grunt work with end-to-end process automation.</p>
-              <a href="#"
-                >Get a Demo
+                />
+                <h4>Business Intelligence</h4>
+                <p>
+                  Turn insight into advantage with cross-functional reports
+                  &amp; dashboards.
+                </p>
+                <a href="#"
+                  >Get a Demo
+                  <img
+                    src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                    alt="icon"
+                /></a>
+              </div>
+              <div class="product-showcase">
                 <img
-                  src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                  src="//assets.www.happyfox.com/v2/images/pricing-wa.svg"
                   alt="icon"
-              /></a>
-            </div>
-            <div class="product-showcase">
-              <!-- <img
+                />
+                <h4>Workflow Automation</h4>
+                <p>Reduce the grunt work with end-to-end process automation.</p>
+                <a href="#"
+                  >Get a Demo
+                  <img
+                    src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
+                    alt="icon"
+                /></a>
+              </div>
+              <div class="product-showcase">
+                <!-- <img
                 src="//assets.www.happyfox.com/v2/images/pricing-wa.svg"
                 alt="icon"
               />
@@ -1157,6 +1210,7 @@
                   src="//assets.www.happyfox.com/v2/images/right-arrow-small.svg"
                   alt="icon"
               /></a> -->
+              </div>
             </div>
           </div>
         </div>
