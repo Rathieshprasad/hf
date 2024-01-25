@@ -262,7 +262,7 @@ img#hfTopbarlogo.hf-productbar__logo {
   box-sizing: border-box;
   cursor: pointer;
   display: inline;
-  max-width: 116px;
+  /* max-width: 116px; */
   overflow: clip;
   vertical-align: middle;
 }
@@ -308,6 +308,7 @@ a.productnav-link {
 }
 
 img#Navbarlogo.productnav-logo {
+  width: 20px;
   aspect-ratio: auto 20 / 20;
   box-sizing: border-box;
   cursor: pointer;
@@ -617,7 +618,10 @@ div.col-md-12.pricing-comparer {
   justify-content: space-between;
 }
 .mighty-box {
-  border-left: 1px solid #eee;
+  /* border-left: 1px solid #eee; */
+  border-left: none;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
   width: 25%;
   height: auto;
 }
@@ -629,7 +633,7 @@ div#mightybox.mighty-box {
   background-color: #ffffff;
   border-radius: 0px 0px 10px 10px;
   box-sizing: border-box;
-  padding: 0px 0px 10px;
+  /* padding: 0px 0px 10px; */
   position: relative;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
@@ -639,7 +643,7 @@ div#Fantastic.mighty-box {
   border-radius: 0px 0px 10px 10px;
   /* box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px; */
   box-sizing: border-box;
-  padding: 0px 0px 10px;
+  /* padding: 0px 0px 10px; */
   position: relative;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
@@ -649,7 +653,7 @@ div#Enterprise.mighty-box {
   border-radius: 0px 0px 10px 10px;
   /* box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px; */
   box-sizing: border-box;
-  padding: 0px 0px 10px;
+  /* padding: 0px 0px 10px; */
   position: relative;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
@@ -659,7 +663,7 @@ div#EnterprisePlus.mighty-box {
   border-radius: 0px 0px 10px 10px;
   /* box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px; */
   box-sizing: border-box;
-  padding: 0px 0px 10px;
+  /* padding: 0px 0px 10px; */
   position: relative;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
@@ -1028,7 +1032,7 @@ p.pricing-table-sub-header {
 }
 
 div.table-column {
-  width: 16%;
+  /* width: 16%; */
   font-size: 16px;
   color: #797879;
   font-weight: 300;
@@ -1197,7 +1201,7 @@ div.faq-container {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 20px 10px 0px;
   box-sizing: border-box;
   margin: 60px 0px 0px;
-  padding: 60px 100px;
+  /* padding: 60px 100px; */
 }
 
 h3 {
@@ -1322,6 +1326,28 @@ h6 {
 
 /* Larger screens (1201px to 1500px) */
 @media all and (min-width: 1201px) and (max-width: 1500px) {
+  .hf-productbar__logo{
+    max-width: 116px;
+  }
+  img#Navbarlogo.productnav-logo {
+    width: 30px;
+    height: 30px;
+  }
+  span.productnav-logo-text{
+    font-size: 25px;
+  }
+  .product-showcase{
+    padding: 35px 20px;
+  }
+  .frequent-questions {
+    width: 100%;
+  }
+  .faq-container {
+    padding: 60px 100px;
+  }
+  .table-column {
+    width: 16%;
+  }
   .pricing-explainer-block {
     width: 48%;
   }
@@ -1353,16 +1379,28 @@ h6 {
   .container {
     max-width: 1140px;
   }
+  .mighty-box {
+    width: 24%;
+    border-left: 1px solid #eee;
+    padding-top: 0;
+    border-top: none;
+  }
 }
 
 /* Larger screens (993px to 1200px) */
 @media all and (min-width: 993px) and (max-width: 1200px) {
-  /* .productnav-logo{
-    width: 20px;
-  } */
-  /* .pricing-banner{
-    background-size: 300%;
-  } */
+  .product-showcase{
+    padding: 35px 20px;
+  }
+  .frequent-questions {
+    width: 100%;
+  }
+  .faq-container {
+    padding: 60px 100px;
+  }
+  .table-column {
+    width: 16%;
+  }
   .pricing-calc-tab {
     flex-direction: row;
     justify-content: space-between;
@@ -1408,7 +1446,7 @@ h6 {
     margin-right: 8px;
     padding: 9px 5px 9px 0;
     min-width: 18px;
-    height: 30px;
+    /* height: 30px; */
   }
   .productnav-logowrap {
     max-width: 100%;
@@ -1445,6 +1483,9 @@ h6 {
   }
   .mighty-box {
     width: 24%;
+    border-left: 1px solid #eee;
+    padding-top: 0;
+    border-top: none;
   }
   .product-bar {
     justify-content: space-between;
@@ -1465,18 +1506,21 @@ h6 {
   ul.products-list {
     display: none;
   }
-  /* 
   
-  .logo-wrap{
-    max-width: 100%;
-    align-items: center;
-    display: flex;
-    width: 30%;
-  } */
 }
 
 /* Medium screens (769px to 992px) */
 @media all and (min-width: 769px) and (max-width: 992px) {
+  .frequent-questions {
+    width: 100%;
+  }
+  .faq-container {
+    padding: 60px 100px;
+  }
+  #pricingsticker {
+    box-shadow: 1px 3px 5px 0 rgba(163, 164, 166, 0.2);
+    top: 0;
+  }
   .pricing-explainer-block {
     width: 48%;
   }
@@ -1510,7 +1554,7 @@ h6 {
     margin-right: 8px;
     padding: 9px 5px 9px 0;
     min-width: 18px;
-    height: 30px;
+    /* height: 30px; */
   }
   .productnav-wrap {
     justify-content: space-between;
@@ -1553,10 +1597,16 @@ h6 {
   }
   .mighty-box {
     width: 48%;
+    border-left: 1px solid #eee;
+    padding-top: 0;
+    border-top: none;
   }
-  #titleone.table-title {
+  .mighty-box + .mighty-box {
+    margin-top: 50px;
+  }
+  /* #titleone.table-title {
     display: none;
-  }
+  } */
   .table-title {
     width: 100%;
   }
@@ -1564,8 +1614,7 @@ h6 {
   .plain-row {
     flex-wrap: wrap;
   }
-  .plain-row,
-  .table-title {
+  .plain-row {
     padding-bottom: 20px;
   }
   .table-column {
@@ -1594,10 +1643,24 @@ h6 {
   .product-showcase {
     width: 70%;
     margin: 20px auto 0;
+    padding: 35px 20px;
   }
 }
 
 @media all and (max-width: 768px) {
+  .frequent-questions {
+    width: 100%;
+  }
+  .faq-container {
+    padding: 60px 50px;
+  }
+  .table-title {
+    width: 100%;
+  }
+  #pricingsticker {
+    box-shadow: 1px 3px 5px 0 rgba(163, 164, 166, 0.2);
+    top: 0;
+  }
   .pricing-plans.div-center {
     display: flex;
     flex-wrap: wrap;
@@ -1628,9 +1691,9 @@ h6 {
     display: block;
     order: 0;
     margin-right: 8px;
-    padding: 9px 5px 9px 0;
+    padding: 15px 5px 9px 0;
     min-width: 18px;
-    height: 30px;
+    /* height: 30px; */
   }
   .product-bar-toggle span {
     display: block;
@@ -1687,9 +1750,16 @@ h6 {
   .mighty-box {
     width: 90%;
     margin: auto;
-    padding-top: 30px;
-    border-top: 1px solid #eee;
+    /* padding-top: 30px;
+    border-top: 1px solid #eee; */
   }
+  .mighty-box + .mighty-box {
+    margin-top: 50px;
+  }
+  .mighty-box + .mighty-box + .mighty-box {
+    margin-top: 50px;
+  }
+
   ul.productnav-menu-list {
     position: absolute;
     top: 50px;
@@ -1707,9 +1777,9 @@ h6 {
   ul.products-list {
     display: none;
   }
-  #titleone.table-title {
+  /* #titleone.table-title {
     display: none;
-  }
+  } */
 
   .table-title {
     width: 100%;
@@ -1720,8 +1790,7 @@ h6 {
     flex-wrap: wrap;
   }
 
-  .plain-row,
-  .table-title {
+  .plain-row {
     padding-bottom: 20px;
   }
 
@@ -1731,11 +1800,20 @@ h6 {
   }
 
   .product-row {
+    margin: 0 auto;
     flex-wrap: wrap;
   }
 
   .product-showcase {
     width: 90%;
+    padding: 35px 20px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .mighty-box.fantastic-box {
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -1779,6 +1857,62 @@ h6 {
   }
 }
 @media all and (min-width: 1501px) {
+  img#Navbarlogo.productnav-logo {
+    width: 30px;
+    height: 30px;
+  }
+  span.productnav-logo-text{
+    font-size: 25px;
+  }
+  .product-showcase{
+    padding: 35px 20px;
+  }
+  .frequent-questions {
+    width: 100%;
+  }
+  .faq-container {
+    padding: 60px 100px;
+  }
+  .table-column {
+    width: 16%;
+  }
+  .pricing-explainer-block {
+    width: 48%;
+  }
+  .pricing-explainer {
+    width: 60%;
+    max-width: 77%;
+  }
+  .productnav-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .productnav-link {
+    padding: 2px 0px;
+  }
+  .product-bar {
+    padding-top: 10px;
+  }
+  .pricing-calc-tab {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 70px;
+  }
+  .pricing-calc-tabs {
+    width: 25%;
+  }
+  .logo-wrap {
+    width: 18.5%;
+  }
+  .container {
+    max-width: 1140px;
+  }
+  .mighty-box {
+    width: 24%;
+    border-left: 1px solid #eee;
+    padding-top: 0;
+    border-top: none;
+  }
   .container {
     max-width: 1140px;
   }

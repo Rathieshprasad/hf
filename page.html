@@ -36,6 +36,34 @@
     }
     window.onload = function () {}
     document.addEventListener("DOMContentLoaded", function () {
+      document.querySelector("#monthly.active").onclick = function () {
+        document.getElementById("mighty-price").innerHTML = "39"
+        document.getElementById("fantastic-price").innerHTML = "59"
+        document.getElementById("enterprise-price").innerHTML = "79"
+        document.getElementById("enterprise-plus-price").innerHTML = "99"
+      }
+
+      document.querySelector("#annual.active").onclick = function () {
+        document.getElementById("mighty-price").innerHTML = "29"
+        document.getElementById("fantastic-price").innerHTML = "49"
+        document.getElementById("enterprise-price").innerHTML = "69"
+        document.getElementById("enterprise-plus-price").innerHTML = "89"
+      }
+
+      document.querySelector("#two-year.active").onclick = function () {
+        document.getElementById("mighty-price").innerHTML = "26"
+        document.getElementById("fantastic-price").innerHTML = "39"
+        document.getElementById("enterprise-price").innerHTML = "52"
+        document.getElementById("enterprise-plus-price").innerHTML = "64"
+      }
+
+      document.querySelector("#three-year.active").onclick = function () {
+        document.getElementById("mighty-price").innerHTML = "27"
+        document.getElementById("fantastic-price").innerHTML = "41"
+        document.getElementById("enterprise-price").innerHTML = "55"
+        document.getElementById("enterprise-plus-price").innerHTML = "69"
+      }
+      
       document.getElementById("unlimited-agents").onclick = function () {
         document.getElementById("mighty").innerHTML = "Starter"
         document.getElementById("fantastic").innerHTML = "Growth"
@@ -273,12 +301,14 @@
               Monthly</button
             ><button
               class="pricing-calc-tabs"
+              id="annual"
               data-val="Annual"
               onclick="toggleActive(this)"
             >
               Annual</button
             ><button
               class="pricing-calc-tabs"
+              id="two-year"
               data-val="2 Year Savings Plan (paid upfront)"
               onclick="toggleActive(this)"
             >
@@ -289,6 +319,7 @@
               ></button
             ><button
               class="pricing-calc-tabs"
+              id="three-year"
               onclick="toggleActive(this)"
               data-val="3 Year Contract"
             >
