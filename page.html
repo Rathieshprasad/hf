@@ -8,136 +8,8 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <script>
-    var mightyBoxes = document.querySelectorAll(".mighty-box")
+  <script src="Page.js"></script>
 
-    mightyBoxes.forEach(function (mightyBox) {
-      mightyBox.addEventListener("mouseover", function () {
-        var pricingButton = mightyBox.querySelector(
-          ".pricing-button.box-pricing-button"
-        )
-        pricingButton.style.backgroundColor = "red"
-      })
-
-      mightyBox.addEventListener("mouseout", function () {
-        var pricingButton = mightyBox.querySelector(
-          ".pricing-button.box-pricing-button"
-        )
-        pricingButton.style.backgroundColor = ""
-      })
-    })
-
-    function toggleActive(button) {
-      document.querySelectorAll(".pricing-calc-tabs").forEach((btn) => {
-        btn.classList.remove("active")
-      })
-
-      button.classList.add("active")
-    }
-    window.onload = function () {}
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelector("#monthly.active").onclick = function () {
-        document.getElementById("mighty-price").innerHTML = "39"
-        document.getElementById("fantastic-price").innerHTML = "59"
-        document.getElementById("enterprise-price").innerHTML = "79"
-        document.getElementById("enterprise-plus-price").innerHTML = "99"
-      }
-
-      document.querySelector("#annual.active").onclick = function () {
-        document.getElementById("mighty-price").innerHTML = "29"
-        document.getElementById("fantastic-price").innerHTML = "49"
-        document.getElementById("enterprise-price").innerHTML = "69"
-        document.getElementById("enterprise-plus-price").innerHTML = "89"
-      }
-
-      document.querySelector("#two-year.active").onclick = function () {
-        document.getElementById("mighty-price").innerHTML = "26"
-        document.getElementById("fantastic-price").innerHTML = "39"
-        document.getElementById("enterprise-price").innerHTML = "52"
-        document.getElementById("enterprise-plus-price").innerHTML = "64"
-      }
-
-      document.querySelector("#three-year.active").onclick = function () {
-        document.getElementById("mighty-price").innerHTML = "27"
-        document.getElementById("fantastic-price").innerHTML = "41"
-        document.getElementById("enterprise-price").innerHTML = "55"
-        document.getElementById("enterprise-plus-price").innerHTML = "69"
-      }
-      
-      document.getElementById("unlimited-agents").onclick = function () {
-        document.getElementById("mighty").innerHTML = "Starter"
-        document.getElementById("fantastic").innerHTML = "Growth"
-        document.getElementById("enterprise").innerHTML = "Scale"
-        document.getElementById("enterprise-plus").innerHTML = "Scale Plus"
-        document.getElementById("mighty-tb").innerHTML = "Starter"
-        document.getElementById("fantastic-tb").innerHTML = "Growth"
-        document.getElementById("enterprise-tb").innerHTML = "Scale"
-        document.getElementById("enterprise-plus-tb").innerHTML = "Scale Plus"
-        document.getElementById("mighty-price").innerHTML = "1,149"
-        document.getElementById("fantastic-price").innerHTML = "1,599"
-        document.getElementById("enterprise-price").innerHTML = "2,399"
-        document.getElementById("enterprise-plus-price").innerHTML = "3,999"
-        document.getElementById("monthly").style.display = "none"
-        document.getElementById("unlimited-agents-a").style.backgroundColor =
-          "#fff"
-        document.getElementById("agent-based-pricing-a").style.backgroundColor =
-          "#ffeada"
-      }
-
-      document.getElementById("agent-based-pricing").onclick = function () {
-        document.getElementById("mighty").innerHTML = "Mighty"
-        document.getElementById("fantastic").innerHTML = "Fantastic"
-        document.getElementById("enterprise").innerHTML = "Enterprise"
-        document.getElementById("enterprise-plus").innerHTML = "Enterprise Plus"
-        document.getElementById("mighty-tb").innerHTML = "Mighty"
-        document.getElementById("fantastic-tb").innerHTML = "Fantastic"
-        document.getElementById("enterprise-tb").innerHTML = "Enterprise"
-        document.getElementById("enterprise-plus-tb").innerHTML =
-          "Enterprise Plus"
-        document.getElementById("mighty-price").innerHTML = "29"
-        document.getElementById("fantastic-price").innerHTML = "39"
-        document.getElementById("enterprise-price").innerHTML = "52"
-        document.getElementById("enterprise-plus-price").innerHTML = "64"
-        document.getElementById("monthly").style.display = "block"
-        document.getElementById("unlimited-agents-a").style.backgroundColor =
-          "#ffeada"
-        document.getElementById("agent-based-pricing-a").style.backgroundColor =
-          "#fff"
-      }
-
-      var questionColumns = document.querySelectorAll(".question-column")
-
-      questionColumns.forEach(function (questionColumn) {
-        var h6Element = questionColumn.querySelector("h6")
-        var pElement = questionColumn.querySelector("p")
-        var downArrow = questionColumn.querySelector("#down-arrow")
-
-        h6Element.addEventListener("click", function () {
-          if (
-            pElement.style.display === "none" ||
-            pElement.style.display === ""
-          ) {
-            downArrow.classList.add("arrow-rotate")
-            pElement.style.display = "block"
-          } else {
-            downArrow.classList.remove("arrow-rotate")
-            pElement.style.display = "none"
-          }
-          pElement.style.transition = "display 1000s ease-out 3s"
-        })
-
-        var knowMoreButton = document.querySelector(".know-more-button")
-        var additionalTablesContainer = document.querySelector(
-          ".additional-table-container"
-        )
-
-        knowMoreButton.addEventListener("click", function () {
-          knowMoreButton.style.display = "none"
-          additionalTablesContainer.style.display = "block"
-        })
-      })
-    })
-  </script>
   <body>
     <header class="product-bar">
       <div class="container">
@@ -1049,7 +921,7 @@
                   <div class="question-row">
                     <div class="question-column">
                       <h6>
-                        Who are help desk agents?
+                        What are Categories?
                         <img
                           id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
@@ -1057,15 +929,17 @@
                         />
                       </h6>
                       <p>
-                        Support agents (help desk staff) who will be actively
-                        managing and responding to tickets raised by contacts.
+                        Categories allow you to separate incoming requests into
+                        dedicated ticket types that can be distributed to a
+                        specific team, have unique SLA requirements, and produce
+                        insightful metrics.
                       </p>
                     </div>
                   </div>
                   <div class="question-row">
                     <div class="question-column">
                       <h6>
-                        Who are help desk agents?
+                        How can I change my plan?
                         <img
                           id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
@@ -1073,15 +947,16 @@
                         />
                       </h6>
                       <p>
-                        Support agents (help desk staff) who will be actively
-                        managing and responding to tickets raised by contacts.
+                        You can upgrade your plan at any point in time. However,
+                        if you want to downgrade, you can do it at the end of
+                        the current billing cycle.
                       </p>
                     </div>
                   </div>
                   <div class="question-row">
                     <div class="question-column">
                       <h6>
-                        Who are help desk agents?
+                        Do You offer a trial?
                         <img
                           id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
@@ -1089,15 +964,19 @@
                         />
                       </h6>
                       <p>
-                        Support agents (help desk staff) who will be actively
-                        managing and responding to tickets raised by contacts.
+                        Yes. We encourage you to request a demo to determine if
+                        HappyFox Help Desk is the right fit for your
+                        organization. Once we identify your needs, we'd be happy
+                        to provide access to a trial account where you can
+                        configure your proof of concept.
                       </p>
                     </div>
                   </div>
                   <div class="question-row">
                     <div class="question-column">
                       <h6>
-                        Who are help desk agents?
+                        Do you offer discounts for non-profits or educational
+                        institutes?
                         <img
                           id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
@@ -1105,23 +984,24 @@
                         />
                       </h6>
                       <p>
-                        Support agents (help desk staff) who will be actively
-                        managing and responding to tickets raised by contacts.
+                        We offer a 10% discount on annual subscriptions on any
+                        plan.
                       </p>
                     </div>
                   </div>
                   <div class="question-row">
                     <div class="question-column">
                       <h6>
-                        Who are help desk agents?
+                        What are the available billing cycles?
                         <img
+                          id="down-arrow"
                           src="//assets.www.happyfox.com/v2/images/down-arrow.svg"
                           alt="icon"
                         />
                       </h6>
                       <p>
-                        Support agents (help desk staff) who will be actively
-                        managing and responding to tickets raised by contacts.
+                        We offer a monthly, annual, 2-year savings plan (paid
+                        upfront), and 3-year contract for agent-based pricing.
                       </p>
                     </div>
                   </div>

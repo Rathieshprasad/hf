@@ -137,7 +137,6 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  /* font-style: italic; */
   margin: 0;
 }
 
@@ -170,8 +169,8 @@ header.product-bar {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Add space between logo, Products, and Log In */
-  flex: 1; /* Take available space */
+  justify-content: space-between;
+  flex: 1;
 }
 
 .logo-wrap {
@@ -211,7 +210,6 @@ nav.product-bar-products {
   border-bottom: 0px;
   cursor: pointer;
   display: inline-block;
-  /* font-family: 'Hero New Medium', sans-serif; */
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -240,17 +238,14 @@ ul.products-list {
 
 .product-bar-link {
   background-color: #ffffff;
-  /* border-radius: 10px; */
   box-sizing: border-box;
-  color: #181c20;
+  color: #646f79;
   cursor: pointer;
   display: inline-block;
-  /* font-family: 'Hero New Regular', sans-serif; */
   font-weight: 400;
   font-size: 13px;
   border-bottom: 2px solid transparent;
   line-height: 1.5;
-  /* padding: 7px 10px; */
   text-align: left;
   text-decoration: none;
   background-color: transparent;
@@ -262,7 +257,6 @@ img#hfTopbarlogo.hf-productbar__logo {
   box-sizing: border-box;
   cursor: pointer;
   display: inline;
-  /* max-width: 116px; */
   overflow: clip;
   vertical-align: middle;
 }
@@ -319,7 +313,6 @@ img#Navbarlogo.productnav-logo {
 span.productnav-logo-text {
   box-sizing: border-box;
   cursor: pointer;
-  /* font-family: 'Hero New Thin', sans-serif; */
   font-weight: 300;
   font-size: 19px;
   line-height: 37.5px;
@@ -879,12 +872,6 @@ a.pricing-button.box-pricing-button:hover {
   color: #fff;
 }
 
-/* div#mightybox.mighty-box:hover a.pricing-button-container,
-div#Fantastic.mighty-box:hover a.pricing-button-container,
-div#Enterprise.mighty-box:hover .pricing-button-container,
-div#EnterprisePlus.mighty-box:hover .pricing-button-container {
-  background-color: red;
-} */
 
 svg {
   overflow: hidden;
@@ -899,7 +886,6 @@ svg {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
-  /* font-family: 'Hero New Regular'; */
   text-align: center;
   max-width: 570px;
   border-radius: 16px;
@@ -907,16 +893,6 @@ svg {
   background: #f9f9f9;
   clear: both;
 }
-/* .pricing-banner-para {
-  margin: 80px auto 40px; 
-  font-size: 16px;
-  font-weight: 300;
-  text-align: center;
-  max-width: 570px;
-  border-radius: 16px;
-  padding: 14px 0 12px;
-  background: #f9f9f9;
-} */
 
 .compare-plans-icon {
   margin: auto;
@@ -1257,7 +1233,18 @@ h6 {
   /* margin-top: 12px; */
   margin: 12px 0px 0px 0px;
   text-align: left;
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
+.question-column p.active {
+  max-height: 0;
+  margin-top: 0;
+}
+
+/* .question-column.open p {
+  max-height: 30px;
+} */
 
 .pricing-more-products {
   margin: 150px 0px 70px;
@@ -1277,7 +1264,7 @@ h6 {
   justify-content: space-between;
   align-items: flex-end;
   text-align: center;
-  width: 95%;
+  width: 90%;
   margin: 0 auto 80px;
 }
 
@@ -1326,17 +1313,17 @@ h6 {
 
 /* Larger screens (1201px to 1500px) */
 @media all and (min-width: 1201px) and (max-width: 1500px) {
-  .hf-productbar__logo{
+  .hf-productbar__logo {
     max-width: 116px;
   }
   img#Navbarlogo.productnav-logo {
     width: 30px;
     height: 30px;
   }
-  span.productnav-logo-text{
+  span.productnav-logo-text {
     font-size: 25px;
   }
-  .product-showcase{
+  .product-showcase {
     padding: 35px 20px;
   }
   .frequent-questions {
@@ -1389,7 +1376,7 @@ h6 {
 
 /* Larger screens (993px to 1200px) */
 @media all and (min-width: 993px) and (max-width: 1200px) {
-  .product-showcase{
+  .product-showcase {
     padding: 35px 20px;
   }
   .frequent-questions {
@@ -1506,7 +1493,6 @@ h6 {
   ul.products-list {
     display: none;
   }
-  
 }
 
 /* Medium screens (769px to 992px) */
@@ -1600,6 +1586,9 @@ h6 {
     border-left: 1px solid #eee;
     padding-top: 0;
     border-top: none;
+  }
+  .mighty-box + .mighty-box.fantastic-box {
+    margin-top: 0px;
   }
   .mighty-box + .mighty-box {
     margin-top: 50px;
@@ -1861,10 +1850,10 @@ h6 {
     width: 30px;
     height: 30px;
   }
-  span.productnav-logo-text{
+  span.productnav-logo-text {
     font-size: 25px;
   }
-  .product-showcase{
+  .product-showcase {
     padding: 35px 20px;
   }
   .frequent-questions {
