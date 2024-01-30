@@ -25,10 +25,23 @@ function toggleActive(button) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('agent-based-pricing').onclick = function () {
-    document.getElementById('agent-based-pricing').classList.add('selected')
-    document.getElementById('unlimited-agents').classList.remove('selected')
+  document.getElementById('agent-based-pricing-a').onclick = function () {
+
+    window.scroll({
+      top: 200,
+      behavior: 'smooth',
+    })
+    document.querySelector('.pricing-calc-tab').style.justifyContent='space-between'
+
+    document.getElementById('agent-based-pricing-a').classList.add('selected')
+    document.getElementById('unlimited-agents-a').classList.remove('selected')
     document.querySelector('#annual').click()
+
+    var priceElements = document.querySelectorAll('.hidden-table')
+
+    priceElements.forEach(function (element) {
+      element.style.display = 'none'
+    })
 
     var priceElements = document.querySelectorAll('.pricing-dollar-amt-snip')
 
@@ -37,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     document.getElementById('monthly').style.display = 'block'
 
-    document.getElementById('unlimited-agents-a').style.backgroundColor =
+    document.getElementById('unlimited-agents-a-a').style.backgroundColor =
       '#ffeada'
-    document.getElementById('agent-based-pricing-a').style.backgroundColor =
+    document.getElementById('agent-based-pricing-a-a').style.backgroundColor =
       '#fff'
 
     document.getElementById('mighty').innerHTML = 'Mighty'
@@ -51,10 +64,21 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('enterprise-tb').innerHTML = 'Enterprise'
     document.getElementById('enterprise-plus-tb').innerHTML = 'Enterprise Plus'
   }
-  document.getElementById('unlimited-agents').onclick = function () {
-    document.getElementById('agent-based-pricing').classList.remove('selected')
-    document.getElementById('unlimited-agents').classList.add('selected')
+  document.getElementById('unlimited-agents-a').onclick = function () {
+    window.scroll({
+      top: 200,
+      behavior: 'smooth',
+    })
+    document.querySelector('.pricing-calc-tab').style.justifyContent='space-around'
+    document.getElementById('agent-based-pricing-a').classList.remove('selected')
+    document.getElementById('unlimited-agents-a').classList.add('selected')
     document.querySelector('#annual').click()
+
+    var priceElements = document.querySelectorAll('.hidden-table')
+
+    priceElements.forEach(function (element) {
+      element.style.display = 'flex'
+    })
 
     var priceElements = document.querySelectorAll('.pricing-dollar-amt-snip')
 
@@ -64,8 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('monthly').style.display = 'none'
 
-    document.getElementById('unlimited-agents-a').style.backgroundColor = '#fff'
-    document.getElementById('agent-based-pricing-a').style.backgroundColor =
+    document.getElementById('unlimited-agents-a-a').style.backgroundColor = '#fff'
+    document.getElementById('agent-based-pricing-a-a').style.backgroundColor =
       '#ffeada'
 
     document.getElementById('mighty').innerHTML = 'Starter'
@@ -103,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     if (
-      document.getElementById('unlimited-agents').classList.contains('selected')
+      document.getElementById('unlimited-agents-a').classList.contains('selected')
     ) {
       // Unlimited Agents pricing
       document.getElementById('mighty-price').innerHTML = '1,499'
@@ -135,12 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
       )
 
       elements.forEach(function (element, index) {
-        // Check if the index is within the bounds of the array
         if (index < valuesToAssign.length) {
-          // Assign a value from the array to each element
           element.innerHTML = valuesToAssign[index]
         } else {
-          // Handle the case when there are more elements than values
           console.error('Not enough values provided for all elements.')
         }
       })
@@ -157,9 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     if (
-      document.getElementById('unlimited-agents').classList.contains('selected')
+      document.getElementById('unlimited-agents-a').classList.contains('selected')
     ) {
-      // Unlimited Agents pricing
       document.getElementById('mighty-price').innerHTML = '1,149'
       document.getElementById('fantastic-price').innerHTML = '1,599'
       document.getElementById('enterprise-price').innerHTML = '2,399'
@@ -176,17 +196,13 @@ document.addEventListener('DOMContentLoaded', function () {
       )
 
       elements.forEach(function (element, index) {
-        // Check if the index is within the bounds of the array
         if (index < valuesToAssign.length) {
-          // Assign a value from the array to each element
           element.innerHTML = valuesToAssign[index]
         } else {
-          // Handle the case when there are more elements than values
           console.error('Not enough values provided for all elements.')
         }
       })
     } else {
-      // Agent-Based pricing
       document.getElementById('mighty-price').innerHTML = '26'
       document.getElementById('fantastic-price').innerHTML = '39'
       document.getElementById('enterprise-price').innerHTML = '52'
@@ -203,12 +219,9 @@ document.addEventListener('DOMContentLoaded', function () {
       )
 
       elements.forEach(function (element, index) {
-        // Check if the index is within the bounds of the array
         if (index < valuesToAssign.length) {
-          // Assign a value from the array to each element
           element.innerHTML = valuesToAssign[index]
         } else {
-          // Handle the case when there are more elements than values
           console.error('Not enough values provided for all elements.')
         }
       })
@@ -224,9 +237,8 @@ document.addEventListener('DOMContentLoaded', function () {
       element.style.display = 'block'
     })
     if (
-      document.getElementById('unlimited-agents').classList.contains('selected')
+      document.getElementById('unlimited-agents-a').classList.contains('selected')
     ) {
-      // Unlimited Agents pricing
       document.getElementById('mighty-price').innerHTML = '1,299'
       document.getElementById('fantastic-price').innerHTML = '1,729'
       document.getElementById('enterprise-price').innerHTML = '2,609'
@@ -243,17 +255,13 @@ document.addEventListener('DOMContentLoaded', function () {
       )
 
       elements.forEach(function (element, index) {
-        // Check if the index is within the bounds of the array
         if (index < valuesToAssign.length) {
-          // Assign a value from the array to each element
           element.innerHTML = valuesToAssign[index]
         } else {
-          // Handle the case when there are more elements than values
           console.error('Not enough values provided for all elements.')
         }
       })
     } else {
-      // Agent-Based pricing
       document.getElementById('mighty-price').innerHTML = '27'
       document.getElementById('fantastic-price').innerHTML = '41'
       document.getElementById('enterprise-price').innerHTML = '55'
@@ -270,22 +278,19 @@ document.addEventListener('DOMContentLoaded', function () {
       )
 
       elements.forEach(function (element, index) {
-        // Check if the index is within the bounds of the array
         if (index < valuesToAssign.length) {
-          // Assign a value from the array to each element
           element.innerHTML = valuesToAssign[index]
         } else {
-          // Handle the case when there are more elements than values
           console.error('Not enough values provided for all elements.')
         }
       })
     }
   }
 
-  var questionColumns = document.querySelectorAll('.question-column')
+  var questionColumns = document.querySelectorAll('.question-row')
 
   questionColumns.forEach(function (questionColumn) {
-    var h6Element = questionColumn.querySelector('h6')
+    var h6Element = questionColumn.querySelector('.question-column')
     var pElement = questionColumn.querySelector('p')
     var downArrow = questionColumn.querySelector('#down-arrow')
 
