@@ -25,13 +25,25 @@ function toggleActive(button) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('agent-based-pricing-a').onclick = function () {
+  var agentBasedPricingTab = document.getElementById('monthly')
 
+  if (agentBasedPricingTab) {
+    agentBasedPricingTab.click()
+  } else {
+    console.error("Element with ID not found.")
+  }
+  var priceElements = document.querySelectorAll('.hidden-table')
+
+  priceElements.forEach(function (element) {
+    element.style.display = 'none'
+  })
+  document.getElementById('agent-based-pricing-a').onclick = function () {
     window.scroll({
       top: 200,
       behavior: 'smooth',
     })
-    document.querySelector('.pricing-calc-tab').style.justifyContent='space-between'
+    document.querySelector('.pricing-calc-tab').style.justifyContent =
+      'space-between'
 
     document.getElementById('agent-based-pricing-a').classList.add('selected')
     document.getElementById('unlimited-agents-a').classList.remove('selected')
@@ -50,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     document.getElementById('monthly').style.display = 'block'
 
-    document.getElementById('unlimited-agents-a-a').style.backgroundColor =
+    document.getElementById('unlimited-agents-a').style.backgroundColor =
       '#ffeada'
-    document.getElementById('agent-based-pricing-a-a').style.backgroundColor =
+    document.getElementById('agent-based-pricing-a').style.backgroundColor =
       '#fff'
 
     document.getElementById('mighty').innerHTML = 'Mighty'
@@ -69,8 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
       top: 200,
       behavior: 'smooth',
     })
-    document.querySelector('.pricing-calc-tab').style.justifyContent='space-around'
-    document.getElementById('agent-based-pricing-a').classList.remove('selected')
+    document.querySelector('.pricing-calc-tab').style.justifyContent =
+      'space-around'
+    document
+      .getElementById('agent-based-pricing-a')
+      .classList.remove('selected')
     document.getElementById('unlimited-agents-a').classList.add('selected')
     document.querySelector('#annual').click()
 
@@ -88,8 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('monthly').style.display = 'none'
 
-    document.getElementById('unlimited-agents-a-a').style.backgroundColor = '#fff'
-    document.getElementById('agent-based-pricing-a-a').style.backgroundColor =
+    document.getElementById('unlimited-agents-a').style.backgroundColor = '#fff'
+    document.getElementById('agent-based-pricing-a').style.backgroundColor =
       '#ffeada'
 
     document.getElementById('mighty').innerHTML = 'Starter'
@@ -127,7 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     if (
-      document.getElementById('unlimited-agents-a').classList.contains('selected')
+      document
+        .getElementById('unlimited-agents-a')
+        .classList.contains('selected')
     ) {
       // Unlimited Agents pricing
       document.getElementById('mighty-price').innerHTML = '1,499'
@@ -178,7 +195,9 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     if (
-      document.getElementById('unlimited-agents-a').classList.contains('selected')
+      document
+        .getElementById('unlimited-agents-a')
+        .classList.contains('selected')
     ) {
       document.getElementById('mighty-price').innerHTML = '1,149'
       document.getElementById('fantastic-price').innerHTML = '1,599'
@@ -237,7 +256,9 @@ document.addEventListener('DOMContentLoaded', function () {
       element.style.display = 'block'
     })
     if (
-      document.getElementById('unlimited-agents-a').classList.contains('selected')
+      document
+        .getElementById('unlimited-agents-a')
+        .classList.contains('selected')
     ) {
       document.getElementById('mighty-price').innerHTML = '1,299'
       document.getElementById('fantastic-price').innerHTML = '1,729'
